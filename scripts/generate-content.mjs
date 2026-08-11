@@ -448,9 +448,13 @@ function buildContentFromWorkbook(workbook) {
       ),
       tags: parseSemicolonArray(row.tags),
       stack: parseSemicolonArray(row.stack),
+      // The sheet template documents links_github / links_demo, but only
+      // github / demo were ever read — so rows filled in per those template
+      // instructions silently produced an empty links object. Accept both
+      // spellings, with github / demo winning when a row has both.
       links: {
-        github: parseOptionalString(row.github),
-        demo: parseOptionalString(row.demo),
+        github: parseOptionalString(row.github) ?? parseOptionalString(row.links_github),
+        demo: parseOptionalString(row.demo) ?? parseOptionalString(row.links_demo),
       },
       highlights: parseSemicolonArray(row.highlights),
       date: parseRequiredString(row.date, "date", `[Projects row ${index + 2}]`),

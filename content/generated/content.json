@@ -475,9 +475,48 @@
     "AWS SageMaker",
     "FastAPI",
     "Event-Driven Systems",
-    "SHAP"
+    "SHAP",
+    "QLoRA"
   ],
   "featuredProjects": [
+    {
+      "title": "SafetyOps Copilot",
+      "summary": "Event-driven safety-incident platform over Redis Streams — DistilBERT severity scoring trained on 273k real MSHA narratives (0.78 macro-F1 vs 0.34 rule-based baseline), YOLOv8 PPE detection, and a LangGraph triage copilot, with dead-letter queues, idempotent replay and full graceful ML degradation.",
+      "tags": [
+        "MLOps",
+        "Event-Driven Architecture",
+        "Computer Vision",
+        "LangGraph"
+      ],
+      "stack": [
+        "FastAPI",
+        "Redis Streams",
+        "PostgreSQL",
+        "YOLOv8"
+      ],
+      "githubUrl": "https://github.com/brej-29/safetyops-copilot",
+      "liveUrl": "https://safetyops-copilot.streamlit.app/",
+      "order": 1
+    },
+    {
+      "title": "Analytics Copilot (Text-to-SQL)",
+      "summary": "Mistral-7B fine-tuned with QLoRA for schema-conditioned SQL generation — 4-bit NF4 with LoRA r=16 across seven projections, a from-scratch evaluation harness (exact match, literal-masked match, sqlglot parse validity, AST schema adherence) over two benchmarks, and dual-provider inference failover.",
+      "tags": [
+        "GenAI",
+        "LLM Fine-Tuning",
+        "QLoRA",
+        "Text-to-SQL"
+      ],
+      "stack": [
+        "Mistral-7B",
+        "QLoRA",
+        "PEFT",
+        "sqlglot"
+      ],
+      "githubUrl": "https://github.com/brej-29/analytics-copilot-text2sql",
+      "liveUrl": "https://analytics-copilot-text2sql.streamlit.app/",
+      "order": 2
+    },
     {
       "title": "RAG Agent Workbench",
       "summary": "Production agentic RAG backend — 8-node LangGraph pipeline with corrective retrieval (CRAG), deterministic retrieval evaluation (recall@k, MRR, nDCG), faithfulness verification, and SSE streaming. 343 tests, deployed on Hugging Face Spaces.",
@@ -495,7 +534,7 @@
       ],
       "githubUrl": "https://github.com/brej-29/rag-agent-workbench",
       "liveUrl": "https://rag-agent-workbench.streamlit.app/",
-      "order": 1
+      "order": 3
     },
     {
       "title": "Customer Churn Prediction — MLOps + GenAI",
@@ -514,7 +553,7 @@
       ],
       "githubUrl": "https://github.com/brej-29/customer-churn-mlops",
       "liveUrl": "https://huggingface.co/spaces/BrejBala/churn-ui",
-      "order": 2
+      "order": 4
     },
     {
       "title": "Inventory Bin Classification — CV on SageMaker",
@@ -531,7 +570,7 @@
         "Lambda"
       ],
       "githubUrl": "https://github.com/brej-29/inventory-bin-count-classifier-aws-sagemaker",
-      "order": 3
+      "order": 5
     },
     {
       "title": "Disaster Tweets — NLP Architecture Benchmarks",
@@ -547,7 +586,7 @@
         "scikit-learn"
       ],
       "githubUrl": "https://github.com/brej-29/disaster-tweets-nlp-model-benchmarks",
-      "order": 4
+      "order": 6
     }
   ],
   "projects": [
@@ -694,7 +733,9 @@
         "TensorFlow",
         "Jupyter"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/Logicmojo-AIML-Assignments-DogBreedClassificationTensorFlow"
+      },
       "highlights": [
         "Transfer learning optimization",
         "120-class multi-label classification",
@@ -720,7 +761,9 @@
         "Pandas",
         "Numpy"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/Logicmojo-AIML-Assignments-heart-disease-prediction-ml"
+      },
       "highlights": [
         "Multi-algorithm comparison",
         "Cross-validated evaluation",
@@ -746,7 +789,9 @@
         "Scikit-learn",
         "Pandas"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/Logicmojo-AIML-Assignments-bulldozer-price-prediction"
+      },
       "highlights": [
         "XGBoost ensembling",
         "Feature engineering for auction data",
@@ -771,7 +816,9 @@
         "NLTK",
         "Scikit-learn"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/otaku-oracle"
+      },
       "highlights": [
         "Custom recommendation algorithm",
         "NLP-based feature extraction",
@@ -795,7 +842,10 @@
         "Streamlit",
         "APIs"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/daily-meal-planner-streamlit",
+        "demo": "https://daily-meal-planner.streamlit.app/"
+      },
       "highlights": [
         "Intelligent constraint solver",
         "Real-time API data",
@@ -819,7 +869,10 @@
         "Streamlit",
         "Pandas"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/daily-workout-planner",
+        "demo": "https://brejesh-daily-workout-planner.streamlit.app/"
+      },
       "highlights": [
         "Progressive workout scaling",
         "Goal-oriented recommendations",
@@ -845,7 +898,10 @@
         "LangChain",
         "OpenAI API"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/aurora-chat-streamlit",
+        "demo": "https://aurora-chat.streamlit.app/"
+      },
       "highlights": [
         "LLM prompt optimization",
         "Token-efficient context handling",
@@ -870,7 +926,9 @@
         "SQL",
         "Excel"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/hr-analytics-dashboard-powerbi"
+      },
       "highlights": [
         "Interactive KPI dashboards",
         "Employee retention analytics",
@@ -895,7 +953,10 @@
         "Streamlit",
         "LangChain"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/essay-writer-streamlit",
+        "demo": "https://essay-writer-app.streamlit.app/"
+      },
       "highlights": [
         "Structured prompt templates",
         "Multi-format export",
@@ -923,7 +984,9 @@
         "scikit-learn",
         "Pandas"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/disaster-tweets-nlp-model-benchmarks"
+      },
       "highlights": [
         "7 architectures under identical splits: classical ML, RNN family (LSTM/GRU/BiLSTM), Conv1D, and USE transfer learning",
         "Best model: Universal Sentence Encoder transfer learning — 81.5% accuracy, 0.81 F1",
@@ -953,7 +1016,9 @@
         "AWS S3",
         "Docker"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/inventory-bin-count-classifier-aws-sagemaker"
+      },
       "highlights": [
         "~22% macro-F1 gain from SageMaker Bayesian HPO with 2-instance distributed training on managed spot instances",
         "Deterministic stratified splits as S3 ImageFolder channels for reproducible training",
@@ -979,7 +1044,9 @@
         "AWS",
         "Jupyter"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/udacity-AWS-ml-engineer-nanodegree"
+      },
       "highlights": [
         "Hyperparameter optimization",
         "Model monitoring",
@@ -1017,6 +1084,7 @@
         "GitHub Actions"
       ],
       "links": {
+        "github": "https://github.com/brej-29/customer-churn-mlops",
         "demo": "https://huggingface.co/spaces/BrejBala/churn-ui"
       },
       "highlights": [
@@ -1052,7 +1120,10 @@
         "yfinance",
         "APIs"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/stock-mini-terminal-streamlit",
+        "demo": "https://stock-terminal.streamlit.app/"
+      },
       "highlights": [
         "Real-time market data",
         "Multi-source aggregation",
@@ -1078,7 +1149,9 @@
         "Pandas",
         "Plotly"
       ],
-      "links": {},
+      "links": {
+        "github": "https://github.com/brej-29/collaborative-data-insights-portal"
+      },
       "highlights": [
         "Multi-user architecture",
         "Shared dataset management",
@@ -1353,6 +1426,18 @@
       "value": "recall@k · MRR · nDCG",
       "description": "Deterministic harness over a hand-labeled golden set — decisions on data, not vibes",
       "order": 9
+    },
+    {
+      "label": "Severity Model Lift",
+      "value": "0.34 → 0.78",
+      "description": "Macro-F1 over the rule-based baseline on 273k MSHA narratives; 5.5x high-severity recall",
+      "order": 10
+    },
+    {
+      "label": "Text-to-SQL Schema Adherence",
+      "value": "97.5%",
+      "description": "In-domain, with 100% parse validity — AST-checked against the supplied schema",
+      "order": 11
     }
   ],
   "navItems": [

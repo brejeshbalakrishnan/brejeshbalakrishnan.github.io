@@ -2,94 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://localhost:3000/</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/experience</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/certificates</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/contact</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-safetyops-copilot</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-analytics-copilot</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-rag-workbench</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-dogbreed-classification</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-heart-disease</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-bulldozer-price</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-otaku-oracle</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-meal-planner</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-workout-planner</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-aurora-chat</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-hr-analytics</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-essay-writer</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-disaster-nlp</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-inventory-classifier</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-aws-ml-nanodegree</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-customer-churn</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-stock-terminal</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
   <url>
     <loc>http://localhost:3000/projects/proj-data-insights-portal</loc>
-    <lastmod>2026-08-10T17:05:16.191Z</lastmod>
+    <lastmod>2026-08-11T02:26:17.898Z</lastmod>
   </url>
 </urlset>
