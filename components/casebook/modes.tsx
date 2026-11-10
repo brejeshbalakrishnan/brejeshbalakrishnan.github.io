@@ -25,23 +25,23 @@ export function Brief() {
       <ReadingHeader mode="brief" title="The 60-second path" />
       <div className="brief-hero">
         <div><p className="eyebrow subdued">{profile.headline}</p><h1>{profile.name}</h1><p className="role">{cloud.role} at Cloud202, since Sep 2026</p>
-          <p className="position">I work on governance and safety controls for AI agents on Amazon Bedrock and AgentCore. I build agent, RAG and guardrail systems, and publish the evaluations, including the results that missed.</p></div>
+          <p className="position">I build governance and safety controls for AI agents on Amazon Bedrock and AgentCore. I publish my evaluations, including the misses.</p></div>
         <ContactLinks />
       </div>
       <section className="brief-section" aria-labelledby="brief-work"><h2 id="brief-work">Three cases</h2>
         <div className="brief-cases">{featured.map(entry => {
           const p = projectById(entry.projectId)
-          return <article key={entry.id}><p className="eyebrow subdued">{entry.kind}</p><h3>{p.title}</h3><strong className="metric">{entry.briefMetric ?? entry.metric}</strong><p>{entry.result}</p><p className="brief-limit">{entry.limit}</p><div className="actions"><Link className="outline" href={`/#${entry.id}`} prefetch={false}>Watch the case</Link>{p.links.github && <External href={p.links.github}>Code</External>}</div></article>
+          return <article key={entry.id}><p className="eyebrow subdued">{entry.kind}</p><h3>{p.title}</h3><strong className="metric">{entry.briefMetric ?? entry.metric}</strong><p>{entry.brief?.result ?? entry.result}</p><p className="brief-limit">{entry.brief?.limit ?? entry.limit}</p><div className="actions"><Link className="outline" href={`/#${entry.id}`} prefetch={false}>Watch the case</Link>{p.links.github && <External href={p.links.github}>Code</External>}</div></article>
         })}</div>
       </section>
       <section className="brief-section" aria-labelledby="brief-experience"><h2 id="brief-experience">Experience</h2>
         <ul className="brief-experience">
-          {[cloud, accenture].map(job => <li key={job.company}><span>{job.dates}</span><p><b>{job.company}</b> · {job.role}. {job.bullets[0]}</p></li>)}
-          <li><span>2021 to 2023</span><p>Four internships: NL-to-SQL research at UnisLink, ML models at Yaltech, research proposals at TREC-STEP, and sponsorship at Youth India Foundation.</p></li>
+          {[cloud, accenture].map((job, i) => <li key={job.company}><span>{job.dates}</span><p><b>{job.company}</b> · {job.role}. {i === 0 ? "Audited 15+ agent governance features against AWS sample projects." : "Cut slow API responses from roughly 80% to under 20%."}</p></li>)}
+          <li><span>2021 to 2023</span><p>Four internships in NL-to-SQL, machine learning, research proposals, and sponsorship.</p></li>
           <li><span>{education.dates}</span><p><b>{education.title}</b>, {education.school}. {education.detail}.</p></li>
         </ul>
       </section>
-      <section className="brief-section" aria-labelledby="brief-how"><h2 id="brief-how">How I work</h2><p className="brief-how">I measure the original first, write the pass marks before scoring, check with an independent implementation, and publish the misses: 94.8% against a 95% target is reported as a miss.</p></section>
+      <section className="brief-section" aria-labelledby="brief-how"><h2 id="brief-how">How I work</h2><p className="brief-how">Measure the baseline, set the pass mark before scoring, check independently, and publish the misses.</p></section>
       <section id="contact" className="brief-section" aria-labelledby="brief-contact"><h2 id="brief-contact">Contact</h2><div><a className="mail" href={`mailto:${contact.email}`}>{contact.email}</a><div className="actions"><Link className="outline big filled" href="/" prefetch={false}>Open the full casebook</Link><Link className="outline big" href="/archive/" prefetch={false}>All {archiveProjects.length} projects</Link></div></div></section>
     </div>
   </main>

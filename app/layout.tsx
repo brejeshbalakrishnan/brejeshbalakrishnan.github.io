@@ -28,7 +28,8 @@ const person = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en" className={archivo.variable}>
+  return <html lang="en" className={archivo.variable} suppressHydrationWarning>
+    <head><script dangerouslySetInnerHTML={{ __html: `try { if (localStorage.getItem("casebook-motion") === "off") document.documentElement.dataset.motion = "off" } catch {}` }} /></head>
     <body>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person).replace(/</g, "\\u003c") }} />

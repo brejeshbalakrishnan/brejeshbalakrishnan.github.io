@@ -1,9 +1,11 @@
 import Link from "next/link"
 import { contact, profile, socialLinks } from "@/content"
-import { archiveProjects, cases, loop, media, misses, projectById } from "@/content/casebook"
+import { archiveProjects, cases, chapters, loop, media, misses, projectById } from "@/content/casebook"
+import type { CSSProperties } from "react"
 import { asset } from "@/lib/asset"
 import { BoundaryDemo, CascadeDemo, GateDemo, PlanDemo, RouterDemo } from "./demos"
 import { ContactPrompt } from "./closing"
+import { StoryCues } from "./story-cues"
 import { Capture, CaseHeading, EvidenceButton, External, ModeLinks, ProjectLinks, Receipt } from "./shared"
 
 function RecheckChart() {
@@ -27,6 +29,7 @@ export function Story() {
     { label: "Something else", reply: "Tell me what it does and what it should have done. I’ll ask how you’d know." },
   ]
   return <main id="main-content" tabIndex={-1}>
+    <StoryCues />
     <section className="tone-black opening" id="s-open" tabIndex={-1} aria-labelledby="opening-heading">
       <div className="inner opening-inner">
         <header className="opening-header"><b>{profile.name}</b><ModeLinks mode="casebook" /></header>
@@ -51,7 +54,7 @@ export function Story() {
     </section>
     <section id="s-iv" className="tone-white" tabIndex={-1} aria-labelledby="interval-heading">
       <div className="inner chapter interval">
-        <figure className="capture"><Capture image={media.otaku} /><figcaption>Otaku Oracle in demo mode: live AniList records, illustrative claims, no model attached.</figcaption></figure>
+        <figure className="capture"><div className="interval-frame"><Capture image={media.otaku} /></div><figcaption>Otaku Oracle in demo mode: live AniList records, illustrative claims, no model attached.</figcaption><ul className="oracle-marks" aria-label="Claim marks"><li>✓ Verified</li><li>× Conflict</li><li>? Unchecked</li></ul></figure>
         <div><p className="chapter-label">Interval · Otaku Oracle</p><h2 id="interval-heading">A verified claim is only as true as its record.</h2>
           <p>Every claim gets a mark: verified, conflict or unchecked. {cases.interval.result} {cases.interval.limit}</p>
           <p className="decision"><b>Decision / what changed</b> {cases.interval.decision}</p>
@@ -93,7 +96,7 @@ export function Story() {
       <div className="inner chapter misses">
         <h2 id="misses-heading">A near miss is still a miss.</h2><p>Each line below is a pass mark I wrote down before the result existed. None of these cleared it.</p>
         <div className="misses-chart"><p className="eyebrow pass-mark">Pass mark, written first</p>
-          <ol>{misses.map(([title, value, note, proportion]) => <li key={title}><div className="miss-bar" aria-hidden="true"><i style={{ height: `${proportion * 100}%` }} /></div><b>{title}</b><span>{value}</span><small>{note}</small></li>)}</ol>
+          <ol>{misses.map(([title, value, note, proportion]) => <li key={title}><div className="miss-bar" aria-hidden="true"><i style={{ "--miss-cap": `${proportion * 100}%` } as CSSProperties} /></div><b>{title}</b><span>{value}</span><small>{note}</small></li>)}</ol>
         </div>
         <p className="coda">I publish these next to the results that passed. They are what make the passes worth reading.</p>
       </div>
@@ -101,7 +104,7 @@ export function Story() {
     <section id="s-end" className="tone-orange" tabIndex={-1} aria-labelledby="closing-heading">
       <div className="inner chapter closing">
         <p className="eyebrow">What you just watched</p><h2 id="closing-heading">Five different failures. One loop.</h2>
-        <ol className="loop">{loop.map(([label, text], i) => <li key={label}><span aria-hidden="true">0{i + 1}</span><h3>{label}</h3><p>{text}</p></li>)}</ol>
+        <ol className="loop">{loop.map(([label, text], i) => <li key={label} style={{ "--step": i, "--chapter-ink": chapters[[1, 2, 4, 5, 6, 8][i]].color } as CSSProperties}><span aria-hidden="true">0{i + 1}</span><h3>{label}</h3><p>{text}</p></li>)}</ol>
         <div className="closing-contact"><h2>Tell me where your system breaks.</h2><ContactPrompt email={contact.email} prompts={prompts} /><p>{contact.availability}</p>
           <div className="actions">{["LinkedIn", "GitHub", "Hugging Face"].map(name => { const link = socialLinks.find(x => x.name === name); return link && <External key={name} href={link.url}>{name}</External> })}<a className="outline" href={asset(profile.resumeUrl)}>Résumé ↓</a></div>
         </div>

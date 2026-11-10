@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
-import { Menu, Pause, Play } from "lucide-react"
+import { Menu } from "lucide-react"
 import type { Mode } from "./shared"
 
 type Chapter = { id: string; number: string; label: string; sub: string; color: string }
@@ -20,14 +20,39 @@ export function Transport({ mode, chapters }: { mode: Mode; chapters: readonly C
   useEffect(() => {
     const query = matchMedia(motionQuery)
     const sync = () => {
-      const enabled = !query.matches && sessionStorage.getItem("casebook-motion") !== "off"
+      const enabled = !query.matches && document.documentElement.dataset.motion !== "off"
       setSystemReduced(query.matches)
       setMotion(enabled)
-      document.documentElement.dataset.motion = enabled ? "on" : "off"
     }
     sync()
     query.addEventListener("change", sync)
     return () => query.removeEventListener("change", sync)
+  }, [])
+
+  useEffect(() => {
+    const dock = nav.current
+    if (!dock) return
+    const root = document.documentElement
+    const measure = () => root.style.setProperty("--transport-height", `${Math.ceil(dock.getBoundingClientRect().height)}px`)
+    const observer = new ResizeObserver(measure)
+    observer.observe(dock)
+    measure()
+    let frame = 0
+    const revealFocus = (event: FocusEvent) => {
+      const target = event.target
+      if (!(target instanceof HTMLElement) || dock.contains(target) || target.closest("dialog")) return
+      if (!target.matches('a, button, summary, input, select, textarea, [contenteditable="true"], [tabindex="0"]')) return
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        const box = target.getBoundingClientRect()
+        const bar = dock.getBoundingClientRect()
+        if (box.bottom > bar.top - 8 && box.top < innerHeight && box.left < bar.right && box.right > bar.left) {
+          window.scrollBy({ top: box.bottom - bar.top + 12, behavior: "instant" })
+        }
+      })
+    }
+    document.addEventListener("focusin", revealFocus)
+    return () => { observer.disconnect(); cancelAnimationFrame(frame); document.removeEventListener("focusin", revealFocus) }
   }, [])
 
   useEffect(() => {
@@ -59,7 +84,7 @@ export function Transport({ mode, chapters }: { mode: Mode; chapters: readonly C
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") { setOpen(false); trigger.current?.focus() }
     }
-    const first = menu.current?.querySelector<HTMLAnchorElement>("a[aria-current]") ?? menu.current?.querySelector<HTMLAnchorElement>("a")
+    const first = menu.current?.querySelector<HTMLAnchorElement>('a[aria-current="location"]') ?? menu.current?.querySelector<HTMLAnchorElement>("a")
     first?.focus()
     document.addEventListener("pointerdown", onPointer)
     document.addEventListener("keydown", onKey)
@@ -68,10 +93,16 @@ export function Transport({ mode, chapters }: { mode: Mode; chapters: readonly C
 
   function toggleMotion() {
     if (systemReduced) return
+    const chapter = mode === "casebook" ? document.getElementById(chapters[current].id) : null
+    const before = chapter?.getBoundingClientRect().top
     const enabled = !motion
-    sessionStorage.setItem("casebook-motion", enabled ? "on" : "off")
+    try { localStorage.setItem("casebook-motion", enabled ? "on" : "off") } catch {}
     document.documentElement.dataset.motion = enabled ? "on" : "off"
     setMotion(enabled)
+    if (chapter && before !== undefined) {
+      const offset = chapter.classList.contains("scene") ? Math.max(0, before) : before
+      window.scrollBy({ top: chapter.getBoundingClientRect().top - offset, behavior: "instant" })
+    }
   }
 
   const chapter = chapters[current]
@@ -82,21 +113,28 @@ export function Transport({ mode, chapters }: { mode: Mode; chapters: readonly C
     <button type="button" className="transport-current" ref={trigger} aria-expanded={open} aria-controls="chapter-menu" onClick={() => setOpen(v => !v)}>
       <span className="ticks" aria-hidden="true">{chapters.map((c, i) => <i key={c.id} data-current={mode === "casebook" && current === i} style={{ background: c.color }} />)}</span>
       <Menu className="mobile-menu-icon" size={17} aria-hidden="true" />
-      <span className="transport-label"><b>{label}</b><small>{sub}</small></span>
+      <span className="transport-label" key={label}><b>{label}</b><small>{sub}</small></span>
     </button>
     <div ref={menu} id="chapter-menu" className="chapter-menu" hidden={!open}>
       <p className="eyebrow">Jump to</p>
-      {chapters.map((c, i) => <Link prefetch={false} key={c.id} href={mode === "casebook" ? `#${c.id}` : `/#${c.id}`} aria-current={mode === "casebook" && current === i ? "location" : undefined} onClick={() => {
+      {chapters.map((c, i) => <Link prefetch={false} scroll={mode !== "casebook"} key={c.id} href={mode === "casebook" ? `#${c.id}` : `/#${c.id}`} aria-current={mode === "casebook" && current === i ? "location" : undefined} onClick={event => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
         setOpen(false)
-        if (mode === "casebook") requestAnimationFrame(() => document.getElementById(c.id)?.focus({ preventScroll: true }))
+        if (mode !== "casebook") return
+        requestAnimationFrame(() => {
+          const section = document.getElementById(c.id)
+          section?.scrollIntoView({ block: "start", behavior: "instant" })
+          section?.focus({ preventScroll: true })
+        })
       }}>
         <i style={{ background: c.color }} aria-hidden="true" /><small>{c.number}</small><span>{c.label}</span>
       </Link>)}
+      <div className="transport-modes">
+        <Link href="/" prefetch={false} aria-current={mode === "casebook" ? "page" : undefined} onClick={() => setOpen(false)}>Casebook</Link>
+        <Link href="/60-seconds/" prefetch={false} aria-current={mode === "brief" ? "page" : undefined} onClick={() => setOpen(false)}>60 sec</Link>
+        <Link href="/archive/" prefetch={false} aria-current={mode === "archive" ? "page" : undefined} onClick={() => setOpen(false)}>Archive</Link>
+      </div>
     </div>
-    <Link href={mode === "brief" ? "/" : "/60-seconds/"} prefetch={false} aria-label={mode === "brief" ? "60 seconds, current mode. Back to Casebook" : "60 seconds"} data-selected={mode === "brief"}>60 sec</Link>
-    <Link href={mode === "archive" ? "/" : "/archive/"} prefetch={false} aria-label={mode === "archive" ? "Archive, current mode. Back to Casebook" : "Archive"} data-selected={mode === "archive"}>Archive</Link>
-    <button className="motion-toggle" type="button" disabled={systemReduced} aria-label={systemReduced ? "Motion off (system preference)" : "Scroll motion"} aria-pressed={motion} onClick={toggleMotion}>
-      {motion ? <Pause size={14} aria-hidden="true" /> : <Play size={14} aria-hidden="true" />} <span>Motion</span>
-    </button>
+    <button className="motion-toggle" type="button" disabled={systemReduced} aria-label={systemReduced ? "Motion off (system preference)" : "Scroll motion"} aria-pressed={motion} onClick={toggleMotion}>Motion <strong>{motion ? "On" : "Off"}</strong></button>
   </nav>
 }

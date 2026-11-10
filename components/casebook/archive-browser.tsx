@@ -39,7 +39,7 @@ function formatDate(date: string) {
 
 export function ArchiveBrowser({ entries, dimensions }: { entries: ArchiveProject[]; dimensions: readonly (readonly [string, string])[] }) {
   const [filter, setFilter] = useState("all")
-  const [selected, setSelected] = useState("proj-safetyops-copilot")
+  const [selected, setSelected] = useState(entries[0].id)
   const [mobile, setMobile] = useState(false)
   useEffect(() => {
     const query = matchMedia("(max-width: 800px)")
@@ -59,19 +59,28 @@ export function ArchiveBrowser({ entries, dimensions }: { entries: ArchiveProjec
   }, [entries])
   const entry = entries.find(p => p.id === selected) ?? entries[0]
   const matches = (e: ArchiveProject, key: string) => key === "all" || e.tags.includes(key)
+  const count = (key: string) => entries.filter(p => matches(p, key)).length
+  function chooseFilter(key: string) {
+    setFilter(key)
+    if (!matches(entry, key)) setSelected(entries.find(p => matches(p, key))?.id ?? entry.id)
+  }
   return <>
-    <div className="options archive-filters" role="group" aria-label="Highlight by line of work">{dimensions.map(([key, name]) => <button key={key} type="button" className="control" aria-pressed={filter === key} onClick={() => {
-      setFilter(key)
-      if (!matches(entry, key)) setSelected(entries.find(p => matches(p, key))?.id ?? entry.id)
-    }}>{name} <small>{entries.filter(p => matches(p, key)).length}</small></button>)}</div>
+    <div className="options archive-filters" role="group" aria-label="Highlight by line of work">{dimensions.map(([key, name]) => <button key={key} type="button" className="control" aria-pressed={filter === key} onClick={() => chooseFilter(key)}>{name} <small>{count(key)}</small></button>)}</div>
+    <div className="archive-filter-mobile">
+      <label htmlFor="archive-category">Filter projects</label>
+      <select id="archive-category" value={filter} onChange={event => chooseFilter(event.target.value)}>
+        {dimensions.map(([key, name]) => <option key={key} value={key}>{name} ({count(key)})</option>)}
+      </select>
+      <button className="control" type="button" onClick={() => chooseFilter("all")}>Everything</button>
+    </div>
     <div className="archive-grid">
-      <ol className="archive-rows">{entries.map(p => <li key={p.id} id={p.id} tabIndex={-1}>
+      <ol className="archive-rows">{entries.map(p => <li key={p.id} id={p.id} tabIndex={-1} data-filtered={!matches(p, filter) && p.id !== entry.id}>
         <button type="button" className="archive-row" aria-pressed={p.id === entry.id} data-muted={!matches(p, filter)} onClick={() => setSelected(p.id)}>
           <span className="archive-title">{p.title} {p.badge && <small>{p.badge}</small>}</span><time dateTime={p.date}>{formatDate(p.date)}</time><span className="archive-line">{p.line}</span>
         </button>
-        {mobile && p.id === entry.id && <Specimen entry={entry} compact />}
+        {mobile && p.id === entry.id && <Specimen key={entry.id} entry={entry} compact />}
       </li>)}</ol>
-      {!mobile && <div className="archive-details" aria-live="polite"><Specimen entry={entry} /></div>}
+      {!mobile && <div className="archive-details" aria-live="polite"><Specimen key={entry.id} entry={entry} /></div>}
     </div>
     <span className="sr-only" role="status">{entry.title} selected.</span>
   </>

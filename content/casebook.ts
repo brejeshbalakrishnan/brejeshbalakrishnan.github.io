@@ -17,6 +17,7 @@ export const cases = {
   gate: {
     id: "s-c1", projectId: "proj-agent-govbench", move: 1, obvious: "Trust the guardrail.", fix: "Measure it.",
     kind: "Agent governance", metric: "94.7% · 0.4%", briefMetric: "94.7% vs 29.8%",
+    brief: { result: "On 999 synthetic scenarios, Gemini Flash blocked 94.7% of misuse and flagged 0.4% of benign calls. Model Armor at MEDIUM blocked 29.8% and flagged 27.1%.", limit: "Agent Gateway was not tested." },
     result: "A Gemini Flash guard blocked 94.7% of malicious tool calls and flagged 0.4% of benign ones. Model Armor at MEDIUM: 29.8% and 27.1%, on 999 synthetic scenarios with the agent in the loop.",
     limit: "Agent Gateway governance was not tested. I didn’t estimate a number for it.",
     decision: "Score from the tool log and report blocking and over-blocking together.",
@@ -35,6 +36,7 @@ export const cases = {
   boundary: {
     id: "s-c2", projectId: "proj-compliance-workbench", move: 3, obvious: "Answer anyway.", fix: "Decline.",
     kind: "Bounded RAG", metric: "13 of 14",
+    brief: { result: "Across 3,946 provisions from nine official texts, the assistant declined 13 of 14 out-of-scope questions without a model call and wrongly declined none of 50 covered questions.", limit: "One out-of-scope question got an answer. No legal advice." },
     result: "Out-of-scope questions declined with no model call; 0 of 50 covered questions wrongly declined. The assistant retrieves from 3,946 provisions across 9 official texts.",
     limit: "One out-of-scope question still got an answer. Information from official texts, not legal advice.",
     decision: "Check coverage and retrieval before asking the model to draft.",
@@ -43,6 +45,7 @@ export const cases = {
   router: {
     id: "s-c3", projectId: "proj-mozhi", move: 4, obvious: "Prompt the LLM.", fix: "Train the router.",
     kind: "Multilingual routing", metric: "0.941 at 2.2 ms",
+    brief: { result: "A 23 MB router scored 0.941 macro-F1 (95% CI 0.916 to 0.962, n = 2,805), versus 0.490 at 3,333 ms for the original prompt. False actions fell from 40.7% to 0.8%.", limit: "Tamil and Malayalam missed the 0.85 target at 0.818 and 0.809." },
     result: "Action macro-F1 for a fine-tuned 23 MB router (95% CI 0.916 to 0.962, n = 2,805), versus 0.490 at 3,333 ms for the original prompt. False actions fell from 40.7% to 0.8%.",
     limit: "Tamil and Malayalam missed the 0.85 target at 0.818 and 0.809. The wording still needs a native speaker’s review.",
     decision: "Replace the prompt with a trained router and make declining an explicit action.",
@@ -67,13 +70,13 @@ export const cases = {
 } satisfies Record<string, {
   id: string; projectId: string; move: number; obvious: string; fix: string; kind: string; metric: string;
   result: string; limit: string; decision: string; method: string;
-    table?: { headings: string[]; rows: string[][] }; briefMetric?: string;
+  table?: { headings: string[]; rows: string[][] }; briefMetric?: string; brief?: { result: string; limit: string };
 }>
 
 export type Case = {
   id: string; projectId: string; move: number; obvious: string; fix: string; kind: string; metric: string;
   result: string; limit: string; decision: string; method: string;
-  table?: { headings: string[]; rows: string[][] }; briefMetric?: string;
+  table?: { headings: string[]; rows: string[][] }; briefMetric?: string; brief?: { result: string; limit: string };
 }
 
 export function projectById(id: string) {
