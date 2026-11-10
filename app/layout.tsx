@@ -3,6 +3,7 @@ import localFont from "next/font/local"
 import { profile, seo, socialLinks } from "@/content"
 import { buildSiteUrl } from "@/lib/site-url"
 import { asset } from "@/lib/asset"
+import { RouteFeedbackProvider } from "@/components/casebook/route-links"
 import "./casebook.css"
 
 const archivo = localFont({ src: "../public/fonts/archivo.woff2", weight: "100 900", variable: "--archivo", display: "swap", adjustFontFallback: false, declarations: [{ prop: "font-stretch", value: "62% 125%" }] })
@@ -33,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <body>
       <a className="skip-link" href="#main-content">Skip to content</a>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person).replace(/</g, "\\u003c") }} />
-      {children}
+      <RouteFeedbackProvider>{children}</RouteFeedbackProvider>
     </body>
   </html>
 }

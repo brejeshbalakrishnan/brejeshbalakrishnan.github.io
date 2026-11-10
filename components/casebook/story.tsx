@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { contact, profile, socialLinks } from "@/content"
 import { archiveProjects, cases, chapters, loop, media, misses, projectById } from "@/content/casebook"
 import type { CSSProperties } from "react"
@@ -6,6 +5,7 @@ import { asset } from "@/lib/asset"
 import { BoundaryDemo, CascadeDemo, GateDemo, PlanDemo, RouterDemo } from "./demos"
 import { ContactPrompt } from "./closing"
 import { StoryCues } from "./story-cues"
+import { ModeLink } from "./route-links"
 import { Capture, CaseHeading, EvidenceButton, External, ModeLinks, ProjectLinks, Receipt } from "./shared"
 
 function RecheckChart() {
@@ -36,7 +36,15 @@ export function Story() {
         <div className="opening-copy">
           <h1 id="opening-heading"><span>AI that</span><s><span className="sr-only">not: </span>is always right.</s><span>knows when <em>it’s wrong.</em></span></h1>
           <p><b>I’m {profile.name}, an AI engineer.</b> {profile.footerTagline} {cloud}</p>
-          <div className="opening-actions"><a className="scroll-cue" href="#s-c1">Five obvious moves. Scroll to watch each one fail.</a><Link className="text-link" href="/60-seconds/" prefetch={false}>Or read it in 60 seconds</Link></div>
+          <div className="opening-actions">
+            <div className="opening-paths">
+              <a className="scroll-cue" href="#s-c1">Five obvious moves. Scroll to watch each one fail.</a>
+              <ModeLink className="text-link" destination="brief">Or read it in 60 seconds</ModeLink>
+            </div>
+            <ModeLink className="opening-record text-link" destination="archive">
+              Full record — {archiveProjects.length} projects, experience &amp; <span className="record-tail">credentials <span aria-hidden="true">→</span></span>
+            </ModeLink>
+          </div>
         </div>
       </div>
     </section>
@@ -109,8 +117,8 @@ export function Story() {
           <div className="actions">{["LinkedIn", "GitHub", "Hugging Face"].map(name => { const link = socialLinks.find(x => x.name === name); return link && <External key={name} href={link.url}>{name}</External> })}<a className="outline" href={asset(profile.resumeUrl)}>Résumé ↓</a></div>
         </div>
         <nav className="closing-nav" aria-label="Keep exploring">
-          <Link href="/archive/" prefetch={false}><b>The archive →</b><span>All {archiveProjects.length} projects by what they test, and the full record.</span></Link>
-          <Link href="/60-seconds/" prefetch={false}><b>60 seconds →</b><span>Role, three cases, experience and contact on one page.</span></Link>
+          <ModeLink destination="archive"><b>The archive →</b><span>All {archiveProjects.length} projects by what they test, and the full record.</span></ModeLink>
+          <ModeLink destination="brief"><b>60 seconds →</b><span>Role, three cases, experience and contact on one page.</span></ModeLink>
           <a href="#s-open"><b>Back to the top ↑</b><span>AI that knows when it’s wrong.</span></a>
         </nav>
         <footer className="colophon"><span>© 2026 {profile.name} · {profile.handle}</span><span>Archivo and JetBrains Mono</span></footer>

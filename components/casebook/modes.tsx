@@ -3,6 +3,7 @@ import { certificates, contact, experience, profile, socialLinks } from "@/conte
 import { archiveProjects, cases, dimensions, education, projectById, type Case } from "@/content/casebook"
 import { asset } from "@/lib/asset"
 import { ArchiveBrowser } from "./archive-browser"
+import { ModeLink } from "./route-links"
 import { External, ModeLinks, type Mode } from "./shared"
 
 function ReadingHeader({ mode, title }: { mode: Mode; title: string }) {
@@ -42,7 +43,7 @@ export function Brief() {
         </ul>
       </section>
       <section className="brief-section" aria-labelledby="brief-how"><h2 id="brief-how">How I work</h2><p className="brief-how">Measure the baseline, set the pass mark before scoring, check independently, and publish the misses.</p></section>
-      <section id="contact" className="brief-section" aria-labelledby="brief-contact"><h2 id="brief-contact">Contact</h2><div><a className="mail" href={`mailto:${contact.email}`}>{contact.email}</a><div className="actions"><Link className="outline big filled" href="/" prefetch={false}>Open the full casebook</Link><Link className="outline big" href="/archive/" prefetch={false}>All {archiveProjects.length} projects</Link></div></div></section>
+      <section id="contact" className="brief-section" aria-labelledby="brief-contact"><h2 id="brief-contact">Contact</h2><div><a className="mail" href={`mailto:${contact.email}`}>{contact.email}</a><div className="actions"><ModeLink className="outline big filled" destination="casebook">Open the full casebook</ModeLink><ModeLink className="outline big" destination="archive">All {archiveProjects.length} projects</ModeLink></div></div></section>
     </div>
   </main>
 }

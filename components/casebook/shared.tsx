@@ -1,4 +1,3 @@
-import Link from "next/link"
 import Image from "next/image"
 import type { Case } from "@/content/casebook"
 import { projectById } from "@/content/casebook"
@@ -7,19 +6,7 @@ import { asset } from "@/lib/asset"
 import { demoLabel } from "@/lib/project-links"
 import { Evidence } from "./evidence"
 
-export const modes = [
-  { key: "casebook", label: "Casebook", href: "/" },
-  { key: "brief", label: "60 seconds", href: "/60-seconds/" },
-  { key: "archive", label: "Archive", href: "/archive/" },
-] as const
-
-export type Mode = (typeof modes)[number]["key"]
-
-export function ModeLinks({ mode }: { mode: Mode }) {
-  return <nav className="mode-links" aria-label="Reading modes">
-    {modes.map(item => <Link key={item.key} href={item.href} aria-current={item.key === mode ? "page" : undefined} prefetch={false}>{item.label}</Link>)}
-  </nav>
-}
+export { ModeLinks, type Mode } from "./route-links"
 
 export function External({ href, children }: { href: string; children: React.ReactNode }) {
   return <a className="outline" href={href}>{children}<span aria-hidden="true">↗</span></a>
