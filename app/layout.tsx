@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: { default: seo.siteTitle, template: `%s | ${profile.name}` },
   description: seo.siteDescription,
   keywords: seo.keywords,
+  verification: { google: "oh5E78cO9NVbC8Bl5yeGIQkNuHgm99lZIPLD5XGksSc" },
   alternates: { canonical: buildSiteUrl("/") },
   openGraph: { type: "website", siteName: "Edge Cases", url: buildSiteUrl("/"), title: seo.siteTitle, description: seo.siteDescription, images: [{ url: buildSiteUrl(seo.ogImage), width: 1200, height: 630, alt: "AI that knows when it’s wrong. Brejesh Balakrishnan’s casebook." }] },
   twitter: { card: "summary_large_image", images: [buildSiteUrl(seo.ogImage)] },
