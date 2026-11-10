@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+import { fileURLToPath } from "node:url"
 const isGithubActions = process.env.GITHUB_ACTIONS === "true"
 
 const repoName = process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split("/")[1] : ""
@@ -11,6 +11,7 @@ const computedBasePath =
   explicitBasePath || (isGithubActions && repoName && !isRootSite ? `/${repoName}` : "")
 
 const nextConfig = {
+  turbopack: { root: fileURLToPath(new URL(".", import.meta.url)) },
   output: "export",
   trailingSlash: true,
   images: {

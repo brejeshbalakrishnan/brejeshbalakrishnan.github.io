@@ -1,19 +1,7 @@
-import { Hero } from "@/components/home/hero"
-import { KeywordMarquee } from "@/components/home/keyword-marquee"
-import { SelectedWork } from "@/components/home/selected-work"
-import { ExperienceStrip } from "@/components/home/experience-strip"
-import { Stack } from "@/components/home/stack"
-import { ContactCta } from "@/components/home/contact-cta"
+import { Story } from "@/components/casebook/story"
+import { Transport } from "@/components/casebook/transport"
+import { chapters } from "@/content/casebook"
 
-export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <KeywordMarquee />
-      <SelectedWork />
-      <ExperienceStrip />
-      <Stack />
-      <ContactCta />
-    </main>
-  )
+export default function CasebookPage() {
+  return <><Story /><Transport mode="casebook" chapters={chapters} /></>
 }

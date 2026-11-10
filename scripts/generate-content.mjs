@@ -616,20 +616,17 @@ function writeJsonFile(filePath, data) {
 }
 
 function buildSiteUrl(pathname) {
-  const baseEnv = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  const baseEnv = process.env.NEXT_PUBLIC_SITE_URL || "https://brejeshbalakrishnan.github.io"
   const base = baseEnv.replace(/\/+$/, "")
   if (!pathname || pathname === "/") return `${base}/`
   return `${base}${pathname.startsWith("/") ? pathname : `/${pathname}`}`
 }
 
-function generateSitemapAndRobots(content) {
+function generateSitemapAndRobots() {
   ensureDir(PUBLIC_DIR)
 
-  const baseRoutes = ["/", "/experience", "/projects", "/certificates", "/contact"]
-  const projectRoutes = (content.projects || []).map((project) => `/projects/${project.id}`)
-  const allRoutes = Array.from(new Set([...baseRoutes, ...projectRoutes]))
+  const allRoutes = ["/", "/60-seconds/", "/archive/"]
 
-  const lastmod = new Date().toISOString()
 
   const sitemapXml =
     '<?xml version="1.0" encoding="UTF-8"?>\n' +
@@ -637,7 +634,7 @@ function generateSitemapAndRobots(content) {
     allRoutes
       .map(
         (route) =>
-          `  <url>\n    <loc>${buildSiteUrl(route)}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`,
+          `  <url>\n    <loc>${buildSiteUrl(route)}</loc>\n  </url>`,
       )
       .join("\n") +
     "\n</urlset>\n"
@@ -660,7 +657,7 @@ function main() {
     const workbook = getWorkbook(CONTENT_XLSX_PATH)
     const content = buildContentFromWorkbook(workbook)
     writeJsonFile(GENERATED_JSON_PATH, content)
-    generateSitemapAndRobots(content)
+    generateSitemapAndRobots()
   } catch (error) {
     if (error instanceof z.ZodError) {
       console.error(

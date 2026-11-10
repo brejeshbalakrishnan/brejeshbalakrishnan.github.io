@@ -1,31 +1,30 @@
 {
   "profile": {
     "name": "Brejesh Balakrishnan",
-    "headline": "Machine Learning Engineer · GenAI / LLM Engineer",
-    "location": "Bengaluru, India (Open to Hybrid/On-site/Relocate)",
+    "headline": "AI Engineer · Agentic AI and Evaluation",
+    "location": "Bengaluru, India",
     "summaryBullets": [
-      "1.5+ years of production engineering at Accenture — AWS-hosted REST APIs, >90% automated test coverage, high-latency responses cut from ~80% to <20%",
-      "Ship LLM / RAG applications: agentic LangGraph pipelines, dense retrieval (Pinecone, FAISS), retrieval evaluation (recall@k, MRR, nDCG) and faithfulness / grounding checks",
-      "Full MLOps in production — MLflow champion/challenger registries, Evidently drift monitoring, CI model-quality gates, Docker — with systems deployed live"
+      "AI Engineer at Cloud202 (UK, remote). I work on governance and safety controls for AI agents built on Amazon Bedrock and AgentCore.",
+      "On my own time I build agent and RAG systems and then test them the hard way: baselines, pass marks written down first, confidence intervals, and write-ups that include what missed.",
+      "Before this I spent almost two years shipping Java and Spring Boot on AWS at Accenture, which is where my habits around tests, profiling and code review come from."
     ],
     "heroTaglines": [
-      "Machine Learning Engineer",
-      "GenAI / LLM Engineer",
-      "RAG · LangGraph · Pinecone",
-      "MLOps: MLflow · DVC · Docker",
-      "AWS SageMaker · Lambda · S3",
-      "Python · SQL · PyTorch",
-      "Open to ML / GenAI roles"
+      "Agent guardrails, measured",
+      "Evaluations written before the results",
+      "RAG that declines when it should",
+      "A 23 MB router instead of an LLM prompt",
+      "MCP servers with real boundaries",
+      "Python, TypeScript, AWS, Google Cloud"
     ],
     "heroPrimaryCtaLabel": "View Projects",
     "heroPrimaryCtaHref": "/projects",
     "heroSecondaryCtaLabel": "Download Resume",
     "heroSecondaryCtaHref": "/resume.pdf",
-    "resumeLabel": "Resume (ML / GenAI Engineer)",
+    "resumeLabel": "Resume (AI Engineer)",
     "resumeUrl": "/resume.pdf",
-    "footerTagline": "Building reliable ML & GenAI systems — from data to deployment.",
+    "footerTagline": "I build AI agents and the evaluations that show whether they hold up.",
     "handle": "@brej-29",
-    "statusText": "Actively interviewing: ML / GenAI Engineer (Bengaluru · Remote) — available immediately",
+    "statusText": "Now at Cloud202, building agent governance on Amazon Bedrock",
     "avatarUrl": "/images/avatar.png",
     "miniAvatarUrl": "/images/avatar-mini.png"
   },
@@ -63,590 +62,806 @@
   ],
   "skills": [
     {
-      "name": "Python",
-      "category": "Programming",
-      "icon": "https://cdn.simpleicons.org/python?viewbox=auto&size=48",
+      "name": "LangGraph",
+      "category": "Agents and LLMs",
       "order": 1
     },
     {
-      "name": "SQL",
-      "category": "Data",
+      "name": "LangChain",
+      "category": "Agents and LLMs",
+      "icon": "https://cdn.simpleicons.org/langchain?viewbox=auto&size=48",
       "order": 2
     },
     {
-      "name": "Pandas",
-      "category": "Data",
-      "icon": "https://icon.icepanel.io/Technology/svg/Pandas.svg",
+      "name": "Model Context Protocol (MCP)",
+      "category": "Agents and LLMs",
+      "icon": "https://cdn.simpleicons.org/modelcontextprotocol?viewbox=auto&size=48",
       "order": 3
     },
     {
-      "name": "NumPy",
-      "category": "Data",
-      "icon": "https://cdn.simpleicons.org/numpy?viewbox=auto&size=48",
+      "name": "Google Agent Development Kit",
+      "category": "Agents and LLMs",
       "order": 4
     },
     {
-      "name": "scikit-learn",
-      "category": "ML",
-      "icon": "https://icon.icepanel.io/Technology/svg/scikit-learn.svg",
+      "name": "Amazon Bedrock and AgentCore",
+      "category": "Agents and LLMs",
       "order": 5
     },
     {
-      "name": "XGBoost",
-      "category": "ML",
+      "name": "Gemini",
+      "category": "Agents and LLMs",
+      "icon": "https://cdn.simpleicons.org/googlegemini?viewbox=auto&size=48",
       "order": 6
     },
     {
-      "name": "TensorFlow",
-      "category": "Deep Learning",
-      "icon": "https://cdn.simpleicons.org/tensorflow?viewbox=auto&size=48",
+      "name": "Anthropic Claude",
+      "category": "Agents and LLMs",
+      "icon": "https://cdn.simpleicons.org/anthropic?viewbox=auto&size=48",
       "order": 7
     },
     {
-      "name": "PyTorch",
-      "category": "Deep Learning",
-      "icon": "https://cdn.simpleicons.org/pytorch?viewbox=auto&size=48",
+      "name": "Model Armor",
+      "category": "Agents and LLMs",
       "order": 8
     },
     {
       "name": "Hugging Face",
-      "category": "GenAI/NLP",
+      "category": "Agents and LLMs",
       "icon": "https://cdn.simpleicons.org/huggingface?viewbox=auto&size=48",
       "order": 9
     },
     {
-      "name": "Transformers (NLP)",
-      "category": "GenAI/NLP",
+      "name": "Pre-registered evaluation",
+      "category": "Evaluation and Retrieval",
       "order": 10
     },
     {
-      "name": "RAG (Retrieval Augmented GenAI)",
-      "category": "GenAI/NLP",
+      "name": "Bootstrap confidence intervals",
+      "category": "Evaluation and Retrieval",
       "order": 11
     },
     {
-      "name": "LangChain",
-      "category": "GenAI/NLP",
+      "name": "Retrieval metrics (recall@k, MRR, nDCG)",
+      "category": "Evaluation and Retrieval",
       "order": 12
     },
     {
-      "name": "MLflow",
-      "category": "MLOps",
+      "name": "Faithfulness and grounding checks",
+      "category": "Evaluation and Retrieval",
       "order": 13
     },
     {
-      "name": "Docker",
-      "category": "DevOps",
-      "icon": "https://cdn.simpleicons.org/docker?viewbox=auto&size=48",
+      "name": "Pinecone",
+      "category": "Evaluation and Retrieval",
       "order": 14
     },
     {
-      "name": "FastAPI",
-      "category": "Frameworks",
-      "icon": "https://cdn.simpleicons.org/fastapi?viewbox=auto&size=48",
+      "name": "FAISS",
+      "category": "Evaluation and Retrieval",
       "order": 15
     },
     {
-      "name": "Flask",
-      "category": "Frameworks",
-      "icon": "https://cdn.simpleicons.org/flask?viewbox=auto&size=48",
+      "name": "sentence-transformers",
+      "category": "Evaluation and Retrieval",
       "order": 16
     },
     {
-      "name": "Streamlit",
-      "category": "Frameworks",
-      "icon": "https://cdn.simpleicons.org/streamlit?viewbox=auto&size=48",
+      "name": "PyTorch",
+      "category": "Models and Training",
+      "icon": "https://cdn.simpleicons.org/pytorch?viewbox=auto&size=48",
       "order": 17
+    },
+    {
+      "name": "Transformers",
+      "category": "Models and Training",
+      "order": 18
+    },
+    {
+      "name": "LoRA and QLoRA (PEFT)",
+      "category": "Models and Training",
+      "order": 19
+    },
+    {
+      "name": "ONNX Runtime",
+      "category": "Models and Training",
+      "icon": "https://cdn.simpleicons.org/onnx?viewbox=auto&size=48",
+      "order": 20
+    },
+    {
+      "name": "scikit-learn",
+      "category": "Models and Training",
+      "icon": "https://icon.icepanel.io/Technology/svg/scikit-learn.svg",
+      "order": 21
+    },
+    {
+      "name": "XGBoost",
+      "category": "Models and Training",
+      "order": 22
+    },
+    {
+      "name": "Optuna",
+      "category": "Models and Training",
+      "order": 23
+    },
+    {
+      "name": "SHAP",
+      "category": "Models and Training",
+      "order": 24
+    },
+    {
+      "name": "OpenCV",
+      "category": "Models and Training",
+      "icon": "https://cdn.simpleicons.org/opencv?viewbox=auto&size=48",
+      "order": 25
+    },
+    {
+      "name": "FastAPI",
+      "category": "MLOps and Serving",
+      "icon": "https://cdn.simpleicons.org/fastapi?viewbox=auto&size=48",
+      "order": 26
+    },
+    {
+      "name": "Docker",
+      "category": "MLOps and Serving",
+      "icon": "https://cdn.simpleicons.org/docker?viewbox=auto&size=48",
+      "order": 27
+    },
+    {
+      "name": "MLflow",
+      "category": "MLOps and Serving",
+      "icon": "https://cdn.simpleicons.org/mlflow?viewbox=auto&size=48",
+      "order": 28
+    },
+    {
+      "name": "DVC",
+      "category": "MLOps and Serving",
+      "order": 29
+    },
+    {
+      "name": "Evidently",
+      "category": "MLOps and Serving",
+      "order": 30
+    },
+    {
+      "name": "Pandera",
+      "category": "MLOps and Serving",
+      "order": 31
+    },
+    {
+      "name": "GitHub Actions",
+      "category": "MLOps and Serving",
+      "icon": "https://cdn.simpleicons.org/githubactions?viewbox=auto&size=48",
+      "order": 32
+    },
+    {
+      "name": "Terraform",
+      "category": "MLOps and Serving",
+      "icon": "https://cdn.simpleicons.org/terraform?viewbox=auto&size=48",
+      "order": 33
+    },
+    {
+      "name": "Prometheus",
+      "category": "MLOps and Serving",
+      "icon": "https://cdn.simpleicons.org/prometheus?viewbox=auto&size=48",
+      "order": 34
+    },
+    {
+      "name": "Grafana",
+      "category": "MLOps and Serving",
+      "icon": "https://cdn.simpleicons.org/grafana?viewbox=auto&size=48",
+      "order": 35
     },
     {
       "name": "AWS",
       "category": "Cloud",
-      "icon": "https://cdn.simpleicons.org/amazonwebservices?viewbox=auto&size=48",
-      "order": 18
+      "order": 36
     },
     {
-      "name": "AWS SageMaker",
+      "name": "Amazon SageMaker",
       "category": "Cloud",
       "icon": "https://icon.icepanel.io/AWS/svg/Machine-Learning/SageMaker.svg",
-      "order": 19
-    },
-    {
-      "name": "AWS S3",
-      "category": "Cloud",
-      "order": 20
+      "order": 37
     },
     {
       "name": "AWS Lambda",
       "category": "Cloud",
-      "order": 21
+      "order": 38
     },
     {
-      "name": "AWS CloudWatch",
+      "name": "Google Cloud",
       "category": "Cloud",
-      "order": 22
+      "icon": "https://cdn.simpleicons.org/googlecloud?viewbox=auto&size=48",
+      "order": 39
     },
     {
-      "name": "Git",
-      "category": "Tools",
-      "icon": "https://cdn.simpleicons.org/git?viewbox=auto&size=48",
-      "order": 23
+      "name": "Cloud Run",
+      "category": "Cloud",
+      "order": 40
     },
     {
-      "name": "GitHub",
-      "category": "Tools",
-      "icon": "https://cdn.simpleicons.org/github?viewbox=auto&size=48",
-      "order": 24
+      "name": "Cloudflare Workers",
+      "category": "Cloud",
+      "icon": "https://cdn.simpleicons.org/cloudflare?viewbox=auto&size=48",
+      "order": 41
     },
     {
-      "name": "GitHub Actions",
-      "category": "DevOps",
-      "icon": "https://cdn.simpleicons.org/githubactions?viewbox=auto&size=48",
-      "order": 25
+      "name": "Oracle Cloud Infrastructure",
+      "category": "Cloud",
+      "order": 42
     },
     {
-      "name": "Jupyter",
-      "category": "Tools",
-      "icon": "https://cdn.simpleicons.org/jupyter?viewbox=auto&size=48",
-      "order": 26
+      "name": "Python",
+      "category": "Languages",
+      "icon": "https://cdn.simpleicons.org/python?viewbox=auto&size=48",
+      "order": 43
     },
     {
-      "name": "VS Code",
-      "category": "Tools",
-      "icon": "https://cdn.simpleicons.org/visualstudiocode?viewbox=auto&size=48",
-      "order": 27
+      "name": "TypeScript",
+      "category": "Languages",
+      "icon": "https://cdn.simpleicons.org/typescript?viewbox=auto&size=48",
+      "order": 44
     },
     {
-      "name": "Postman",
-      "category": "Tools",
-      "icon": "https://cdn.simpleicons.org/postman?viewbox=auto&size=48",
-      "order": 28
+      "name": "JavaScript",
+      "category": "Languages",
+      "icon": "https://cdn.simpleicons.org/javascript?viewbox=auto&size=48",
+      "order": 45
     },
     {
-      "name": "Power BI",
-      "category": "Visualization",
-      "icon": "https://cdn.simpleicons.org/powerbi?viewbox=auto&size=48",
-      "order": 29
+      "name": "SQL",
+      "category": "Languages",
+      "order": 46
     },
     {
-      "name": "Matplotlib",
-      "category": "Visualization",
-      "order": 30
+      "name": "Java",
+      "category": "Languages",
+      "icon": "https://cdn.simpleicons.org/openjdk?viewbox=auto&size=48",
+      "order": 47
     },
     {
-      "name": "Plotly",
-      "category": "Visualization",
-      "icon": "https://cdn.simpleicons.org/plotly?viewbox=auto&size=48",
-      "order": 31
+      "name": "React",
+      "category": "Web and Frameworks",
+      "icon": "https://cdn.simpleicons.org/react?viewbox=auto&size=48",
+      "order": 48
     },
     {
-      "name": "Seaborn",
-      "category": "Visualization",
-      "order": 32
+      "name": "Vite",
+      "category": "Web and Frameworks",
+      "icon": "https://cdn.simpleicons.org/vite?viewbox=auto&size=48",
+      "order": 49
     },
     {
-      "name": "MySQL",
+      "name": "Next.js",
+      "category": "Web and Frameworks",
+      "icon": "https://cdn.simpleicons.org/nextdotjs?viewbox=auto&size=48",
+      "order": 50
+    },
+    {
+      "name": "Spring Boot",
+      "category": "Web and Frameworks",
+      "icon": "https://cdn.simpleicons.org/springboot?viewbox=auto&size=48",
+      "order": 51
+    },
+    {
+      "name": "Streamlit",
+      "category": "Web and Frameworks",
+      "icon": "https://cdn.simpleicons.org/streamlit?viewbox=auto&size=48",
+      "order": 52
+    },
+    {
+      "name": "Playwright",
+      "category": "Web and Frameworks",
+      "order": 53
+    },
+    {
+      "name": "PostgreSQL",
       "category": "Data",
-      "icon": "https://cdn.simpleicons.org/mysql?viewbox=auto&size=48",
-      "order": 33
+      "icon": "https://cdn.simpleicons.org/postgresql?viewbox=auto&size=48",
+      "order": 54
+    },
+    {
+      "name": "Redis and Redis Streams",
+      "category": "Data",
+      "icon": "https://cdn.simpleicons.org/redis?viewbox=auto&size=48",
+      "order": 55
     },
     {
       "name": "MongoDB",
       "category": "Data",
       "icon": "https://cdn.simpleicons.org/mongodb?viewbox=auto&size=48",
-      "order": 34
-    },
-    {
-      "name": "Redis",
-      "category": "Data",
-      "icon": "https://cdn.simpleicons.org/redis?viewbox=auto&size=48",
-      "order": 35
-    },
-    {
-      "name": "Jenkins",
-      "category": "DevOps",
-      "icon": "https://cdn.simpleicons.org/jenkins?viewbox=auto&size=48",
-      "order": 36
-    },
-    {
-      "name": "SonarQube",
-      "category": "DevOps",
-      "icon": "https://cdn.simpleicons.org/sonarqube?viewbox=auto&size=48",
-      "order": 37
-    },
-    {
-      "name": "Java",
-      "category": "Programming",
-      "icon": "https://cdn.simpleicons.org/java?viewbox=auto&size=48",
-      "order": 38
-    },
-    {
-      "name": "Spring Boot",
-      "category": "Frameworks",
-      "icon": "https://cdn.simpleicons.org/springboot?viewbox=auto&size=48",
-      "order": 39
-    },
-    {
-      "name": "JavaScript",
-      "category": "Programming",
-      "icon": "https://cdn.simpleicons.org/javascript?viewbox=auto&size=48",
-      "order": 40
-    },
-    {
-      "name": "TypeScript",
-      "category": "Programming",
-      "icon": "https://cdn.simpleicons.org/typescript?viewbox=auto&size=48",
-      "order": 41
-    },
-    {
-      "name": "React",
-      "category": "Frameworks",
-      "icon": "https://cdn.simpleicons.org/react?viewbox=auto&size=48",
-      "order": 42
-    },
-    {
-      "name": "Angular",
-      "category": "Frameworks",
-      "icon": "https://cdn.simpleicons.org/angular?viewbox=auto&size=48",
-      "order": 43
-    },
-    {
-      "name": "HTML",
-      "category": "Programming",
-      "icon": "https://cdn.simpleicons.org/html5?viewbox=auto&size=48",
-      "order": 44
-    },
-    {
-      "name": "CSS",
-      "category": "Programming",
-      "icon": "https://cdn.simpleicons.org/css3?viewbox=auto&size=48",
-      "order": 45
-    },
-    {
-      "name": "Jira",
-      "category": "Tools",
-      "icon": "https://cdn.simpleicons.org/jira?viewbox=auto&size=48",
-      "order": 46
-    },
-    {
-      "name": "Confluence",
-      "category": "Tools",
-      "icon": "https://cdn.simpleicons.org/confluence?viewbox=auto&size=48",
-      "order": 47
-    },
-    {
-      "name": "Slack",
-      "category": "Tools",
-      "icon": "https://cdn.simpleicons.org/slack?viewbox=auto&size=48",
-      "order": 48
-    },
-    {
-      "name": "LightGBM",
-      "category": "ML",
-      "order": 49
-    },
-    {
-      "name": "CatBoost",
-      "category": "ML",
-      "order": 50
-    },
-    {
-      "name": "Optuna (HPO)",
-      "category": "ML",
-      "order": 51
-    },
-    {
-      "name": "SHAP (Explainability)",
-      "category": "ML",
-      "order": 52
-    },
-    {
-      "name": "LangGraph",
-      "category": "GenAI/NLP",
-      "order": 53
-    },
-    {
-      "name": "Pinecone",
-      "category": "GenAI/NLP",
-      "order": 54
-    },
-    {
-      "name": "FAISS",
-      "category": "GenAI/NLP",
-      "order": 55
-    },
-    {
-      "name": "sentence-transformers",
-      "category": "GenAI/NLP",
       "order": 56
     },
     {
-      "name": "LLM APIs (Groq · Gemini)",
-      "category": "GenAI/NLP",
+      "name": "Pandas",
+      "category": "Data",
+      "icon": "https://icon.icepanel.io/Technology/svg/Pandas.svg",
       "order": 57
     },
     {
-      "name": "Retrieval Evaluation (recall@k · MRR · nDCG)",
-      "category": "GenAI/NLP",
+      "name": "NumPy",
+      "category": "Data",
+      "icon": "https://cdn.simpleicons.org/numpy?viewbox=auto&size=48",
       "order": 58
     },
     {
-      "name": "DVC",
-      "category": "MLOps",
+      "name": "Git",
+      "category": "Tools",
+      "icon": "https://cdn.simpleicons.org/git?viewbox=auto&size=48",
       "order": 59
     },
     {
-      "name": "DagsHub",
-      "category": "MLOps",
+      "name": "GitHub",
+      "category": "Tools",
+      "icon": "https://cdn.simpleicons.org/github?viewbox=auto&size=48",
       "order": 60
-    },
-    {
-      "name": "Pandera (Data Contracts)",
-      "category": "MLOps",
-      "order": 61
-    },
-    {
-      "name": "Evidently (Drift Monitoring)",
-      "category": "MLOps",
-      "order": 62
-    },
-    {
-      "name": "Prometheus",
-      "category": "DevOps",
-      "order": 63
     },
     {
       "name": "pytest",
       "category": "Tools",
-      "order": 64
+      "icon": "https://cdn.simpleicons.org/pytest?viewbox=auto&size=48",
+      "order": 61
     },
     {
-      "name": "Fine-Tuning (QLoRA · PEFT)",
-      "category": "GenAI/NLP",
-      "order": 65
+      "name": "Linux",
+      "category": "Tools",
+      "icon": "https://cdn.simpleicons.org/linux?viewbox=auto&size=48",
+      "order": 62
     },
     {
-      "name": "Unsloth",
-      "category": "GenAI/NLP",
-      "order": 66
-    },
-    {
-      "name": "Text-to-SQL",
-      "category": "GenAI/NLP",
-      "order": 67
-    },
-    {
-      "name": "YOLOv8",
-      "category": "Deep Learning",
-      "order": 68
-    },
-    {
-      "name": "DistilBERT",
-      "category": "Deep Learning",
-      "order": 69
-    },
-    {
-      "name": "Redis Streams",
-      "category": "Data Engineering",
-      "order": 70
-    },
-    {
-      "name": "Grafana",
-      "category": "DevOps",
-      "order": 71
-    },
-    {
-      "name": "PostgreSQL",
-      "category": "Data",
-      "order": 72
+      "name": "Power BI",
+      "category": "Tools",
+      "order": 63
     }
   ],
   "techStack": [
-    "Machine Learning",
-    "GenAI / LLMs",
+    "Agentic AI",
+    "LLM Evaluation",
+    "Agent Guardrails",
+    "MCP",
     "RAG",
-    "LLM Fine-Tuning",
     "LangGraph",
+    "Tool Calling",
+    "LoRA Fine-Tuning",
+    "Amazon Bedrock",
+    "Google ADK",
     "Python",
-    "SQL",
+    "TypeScript",
     "PyTorch",
-    "XGBoost",
-    "MLflow",
-    "Docker",
-    "AWS SageMaker",
     "FastAPI",
-    "Event-Driven Systems",
-    "SHAP",
-    "QLoRA"
+    "MLOps",
+    "AWS"
   ],
   "featuredProjects": [
     {
-      "title": "SafetyOps Copilot",
-      "summary": "Event-driven safety-incident platform over Redis Streams — DistilBERT severity scoring trained on 273k real MSHA narratives (0.78 macro-F1 vs 0.34 rule-based baseline), YOLOv8 PPE detection, and a LangGraph triage copilot, with dead-letter queues, idempotent replay and full graceful ML degradation.",
+      "title": "Agent GovBench",
+      "summary": "An open benchmark for guardrails on tool-using agents: 999 scenarios, scored from the tool-call log. A Gemini Flash guard blocked 94.7% of malicious calls, Model Armor at MEDIUM 29.8%.",
       "tags": [
-        "MLOps",
-        "Event-Driven Architecture",
-        "Computer Vision",
-        "LangGraph"
+        "Agentic AI",
+        "Guardrails",
+        "LLM Evaluation"
       ],
       "stack": [
-        "FastAPI",
-        "Redis Streams",
-        "PostgreSQL",
-        "YOLOv8"
+        "Google ADK",
+        "Gemini",
+        "MCP",
+        "Cloud Run"
       ],
-      "githubUrl": "https://github.com/brej-29/safetyops-copilot",
-      "liveUrl": "https://safetyops-copilot.streamlit.app/",
+      "githubUrl": "https://github.com/brej-29/agent-govbench",
+      "liveUrl": "https://huggingface.co/datasets/BrejBala/agent-govbench",
       "order": 1
     },
     {
-      "title": "Analytics Copilot (Text-to-SQL)",
-      "summary": "Mistral-7B fine-tuned with QLoRA for schema-conditioned SQL generation — 4-bit NF4 with LoRA r=16 across seven projections, a from-scratch evaluation harness (exact match, literal-masked match, sqlglot parse validity, AST schema adherence) over two benchmarks, and dual-provider inference failover.",
+      "title": "Toolcall Guard",
+      "summary": "A LoRA-tuned Gemma 4 guard that screens one agent tool call before it runs, and a cascade that calls Gemini only when unsure. About 29% cheaper than Flash alone at the same measured quality.",
       "tags": [
-        "GenAI",
-        "LLM Fine-Tuning",
-        "QLoRA",
-        "Text-to-SQL"
+        "Agentic AI",
+        "Guardrails",
+        "Fine-Tuning"
       ],
       "stack": [
-        "Mistral-7B",
-        "QLoRA",
-        "PEFT",
-        "sqlglot"
+        "Gemma 4",
+        "LoRA",
+        "Gemini",
+        "MCP"
       ],
-      "githubUrl": "https://github.com/brej-29/analytics-copilot-text2sql",
-      "liveUrl": "https://analytics-copilot-text2sql.streamlit.app/",
+      "githubUrl": "https://github.com/brej-29/toolcall-guard",
+      "liveUrl": "https://brej-29.github.io/toolcall-guard/",
       "order": 2
     },
     {
-      "title": "RAG Agent Workbench",
-      "summary": "Production agentic RAG backend — 8-node LangGraph pipeline with corrective retrieval (CRAG), deterministic retrieval evaluation (recall@k, MRR, nDCG), faithfulness verification, and SSE streaming. 343 tests, deployed on Hugging Face Spaces.",
+      "title": "Compliance Workbench",
+      "summary": "A RAG assistant over 3,946 provisions from 9 official EU and NIST texts. Quotes the article, shows when the rule applies, and declined 13 of 14 questions it shouldn't answer.",
       "tags": [
-        "GenAI",
         "RAG",
-        "LangGraph",
-        "Agentic AI"
+        "Agentic AI",
+        "MCP"
       ],
       "stack": [
-        "FastAPI",
         "LangGraph",
+        "FastAPI",
         "Pinecone",
-        "Groq"
+        "MCP"
       ],
       "githubUrl": "https://github.com/brej-29/rag-agent-workbench",
-      "liveUrl": "https://rag-agent-workbench.streamlit.app/",
+      "liveUrl": "https://rag-agent-workbench.streamlit.app",
       "order": 3
     },
     {
-      "title": "Customer Churn Prediction — MLOps + GenAI",
-      "summary": "Optuna-tuned XGBoost (PR-AUC 0.62→0.67) with SHAP-grounded LLM explanations, Pandera data contracts, Evidently drift monitoring, MLflow champion/challenger registry, and a CI model-quality gate — deployed live with ~399 tests.",
+      "title": "Otaku Oracle",
+      "summary": "Anime answers with every claim checked against AniList. A pre-registered evaluation of 744 pairs per model measured a 38.7 point accuracy gain from grounding.",
       "tags": [
-        "MLOps",
-        "Explainability",
-        "GenAI",
-        "XGBoost"
+        "LLM Evaluation",
+        "RAG"
       ],
       "stack": [
-        "XGBoost",
-        "MLflow",
-        "SHAP",
-        "FastAPI"
+        "React",
+        "Cloudflare Workers",
+        "Python"
       ],
-      "githubUrl": "https://github.com/brej-29/customer-churn-mlops",
-      "liveUrl": "https://huggingface.co/spaces/BrejBala/churn-ui",
+      "githubUrl": "https://github.com/brej-29/otaku-oracle",
+      "liveUrl": "https://otaku-oracle.brejesh-bala.workers.dev",
       "order": 4
     },
     {
-      "title": "Inventory Bin Classification — CV on SageMaker",
-      "summary": "ResNet-50 transfer learning on 10,000+ warehouse images; SageMaker Bayesian HPO with distributed spot training (+22% macro-F1) and a real-time endpoint with Lambda integration.",
+      "title": "Feasible Day",
+      "summary": "Two open LLMs planned a feasible day in 2 of 576 runs. This planner checks opening hours and walking time for every stop and shows which checks passed.",
       "tags": [
-        "Computer Vision",
-        "AWS SageMaker",
-        "MLOps"
+        "LLM Evaluation",
+        "Planning"
       ],
       "stack": [
-        "PyTorch",
-        "ResNet-50",
-        "SageMaker",
-        "Lambda"
+        "TypeScript",
+        "React",
+        "OpenStreetMap",
+        "OSRM"
       ],
-      "githubUrl": "https://github.com/brej-29/inventory-bin-count-classifier-aws-sagemaker",
+      "githubUrl": "https://github.com/brej-29/feasible-day",
+      "liveUrl": "https://brejbala-feasible-day.static.hf.space",
       "order": 5
     },
     {
-      "title": "Disaster Tweets — NLP Architecture Benchmarks",
-      "summary": "7 architectures benchmarked under identical splits on ~7,600 tweets; USE transfer learning wins at 81.5% accuracy / 0.81 F1 — rigorous, reproducible NLP experimentation.",
+      "title": "SafetyOps Copilot",
+      "summary": "Safety observations become explainable assessments, owned actions and shift handovers, with a read-only MCP server and a DistilBERT classifier at 0.78 macro-F1 against 0.34 for rules.",
       "tags": [
+        "MLOps",
         "NLP",
-        "Transfer Learning",
-        "Benchmarking"
+        "MCP"
       ],
       "stack": [
-        "TensorFlow",
-        "TF Hub",
-        "scikit-learn"
+        "FastAPI",
+        "PostgreSQL",
+        "DistilBERT",
+        "MCP"
       ],
-      "githubUrl": "https://github.com/brej-29/disaster-tweets-nlp-model-benchmarks",
+      "githubUrl": "https://github.com/brej-29/safetyops-copilot",
+      "liveUrl": "https://safetyops-api-a5afr3rcdq-as.a.run.app/",
       "order": 6
     }
   ],
   "projects": [
     {
-      "id": "proj-safetyops-copilot",
-      "title": "SafetyOps Copilot",
-      "oneLine": "Event-driven safety-incident platform: Redis Streams pipeline, DistilBERT severity scoring on 273k real MSHA narratives, YOLOv8 PPE detection, and a LangGraph triage copilot.",
-      "description": "An event-driven incident monitoring platform for industrial EHS teams, built as three independently deployable services (FastAPI API, Streamlit UI, background worker) connected by a Redis Streams message bus over shared Postgres. Free-text reports are scored for severity by a DistilBERT model fine-tuned on 273,000 real MSHA accident narratives (labels derived from regulatory outcome codes, not synthetic data), site photos are scored for PPE compliance by YOLOv8n, and a 5-node LangGraph state machine generates structured triage briefs — deterministic and fully testable without any LLM, with the LLM as an optional enhancement layer that fails silently back to the deterministic draft.",
+      "id": "proj-agent-govbench",
+      "title": "Agent GovBench",
+      "oneLine": "An open benchmark that measures whether guardrails actually stop a tool-using AI agent from being misused.",
+      "description": "Guardrails for agents get sold on claims, so I built a way to measure them. Agent GovBench runs a Google ADK agent with 9 tools across 5 stub MCP servers on Google Cloud, against 999 synthetic scenarios. 45% of them are ordinary requests that only look risky, so a guard can't win by blocking everything. Attack success is scored from the tool-call log by a deterministic check, not by an LLM judge alone.",
       "tags": [
-        "MLOps",
-        "Event-Driven Architecture",
-        "Computer Vision",
-        "NLP",
-        "LangGraph",
-        "Production ML"
+        "Agentic AI",
+        "Guardrails",
+        "LLM Evaluation",
+        "MCP"
+      ],
+      "stack": [
+        "Python",
+        "Google Agent Development Kit",
+        "Gemini",
+        "Model Armor",
+        "MCP",
+        "Cloud Run",
+        "Terraform",
+        "Hugging Face Hub"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/agent-govbench",
+        "demo": "https://huggingface.co/datasets/BrejBala/agent-govbench"
+      },
+      "highlights": [
+        "Model Armor at its MEDIUM injection threshold blocked 29.8% of malicious calls and flagged 27.1% of benign ones. A Gemini Flash guard blocked 94.7% and flagged 0.4%, measured with the agent in the loop.",
+        "Attack success comes from the tool-call log with a deterministic check, so the result doesn't depend on an LLM judge's quirks.",
+        "The benign twins are deliberate: 45% of scenarios are legitimate requests that look risky, which is what exposes over-blocking.",
+        "Published the harness and sanitized data with bootstrap intervals and written limits. Agent Gateway governance is logged as not tested, not estimated."
+      ],
+      "date": "2026-10",
+      "order": 1
+    },
+    {
+      "id": "proj-toolcall-guard",
+      "title": "Toolcall Guard",
+      "oneLine": "A small free guard model that checks one agent tool call before it runs, plus a cascade that only pays for Gemini when the local model is unsure.",
+      "description": "I distilled a hosted Gemini guard into Gemma 4 E4B with LoRA, so a laptop can look at a proposed tool call and answer allow or block with a category and a one-line reason. Then I judged it on 1,566 real agent calls from Agent GovBench instead of only its own synthetic test set. It blocks 62% of attacks at 8% false positives, which is not good enough to be a sole gate. So I added a cascade, an MCP server and a static site where you can try it with your own key.",
+      "tags": [
+        "Agentic AI",
+        "Guardrails",
+        "Fine-Tuning",
+        "MCP"
+      ],
+      "stack": [
+        "Python",
+        "Gemma 4 E4B",
+        "LoRA (PEFT)",
+        "Gemini",
+        "MCP",
+        "Kaggle",
+        "Hugging Face Hub",
+        "GitHub Pages"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/toolcall-guard",
+        "demo": "https://brej-29.github.io/toolcall-guard/"
+      },
+      "highlights": [
+        "Tuning cut false positives from 15% to 8% at about the same recall. It did not make the free model a safe sole gate, and the write-up says so.",
+        "4-bit quantization dropped real-traffic recall to 35%, which is why the laptop version is a screen and not a gate.",
+        "The cascade sends 69% of calls to Gemini and still blocks 98% with 2% false positives on 981 held-out calls, at USD 2.43 per 1,000 calls against 3.42 for Flash alone (about 29% cheaper).",
+        "Compared on Agent GovBench traffic because my synthetic test set was labelled by Pro (circular) and written by Flash (advantaged).",
+        "Family-hash splits with leakage checks. Total recorded spend: USD 67.50."
+      ],
+      "date": "2026-10",
+      "order": 2
+    },
+    {
+      "id": "proj-compliance-workbench",
+      "title": "Compliance Workbench",
+      "oneLine": "Ask which EU and US rules apply to your AI, data or cyber product. Answers quote the official text, show the start date, and decline what they don't cover.",
+      "description": "A RAG assistant over 3,946 provisions from 9 official texts, including the EU AI Act, GDPR, NIS2, DORA, the Cyber Resilience Act and NIST. It started as an 8-node LangGraph backend and grew into three tools: Ask, a checklist of 112 duty-bearing articles, and a gap check that compares a pasted policy with the law. Declining is a feature here, and I measured it. It is information from official text, not legal advice.",
+      "tags": [
+        "RAG",
+        "Agentic AI",
+        "LLM Evaluation",
+        "MCP"
       ],
       "stack": [
         "Python",
         "FastAPI",
-        "Redis Streams",
-        "PostgreSQL",
-        "SQLAlchemy",
         "LangGraph",
+        "Pinecone",
+        "Streamlit",
+        "MCP",
+        "Docker",
+        "GitHub Actions",
+        "Hugging Face Spaces"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/rag-agent-workbench",
+        "demo": "https://rag-agent-workbench.streamlit.app"
+      },
+      "highlights": [
+        "Right article in the top 6 on 50 hand-labelled questions: recall 0.847, MRR 0.862. I set the labels by reading the documents, not by running my own retriever.",
+        "Declined 13 of 14 questions about rules it doesn't cover, with no model call, and wrongly declined 0 of 50 covered ones.",
+        "The gap check never called a planted gap covered in any run. Each verdict quotes both the law and the policy, checked word for word.",
+        "Every start date carries a verbatim quote of the law, and a test fails the build if a date or quote isn't in the source data.",
+        "Earlier, I A/B tested a hosted reranker, found it net negative (nDCG@3 down 0.057, latency up 435 ms) and switched it off.",
+        "Ten prompt-injection cases with no breaches, 677 offline tests, and the same tools are available over MCP."
+      ],
+      "date": "2026-11",
+      "order": 3
+    },
+    {
+      "id": "proj-otaku-oracle",
+      "title": "Otaku Oracle",
+      "oneLine": "An anime Q&A site where the model drafts an answer and a deterministic checker marks every claim against AniList as verified, conflict or unchecked.",
+      "description": "I wanted to see whether AI answers could be made easier to check. The model writes a draft, then a checker compares each claim with the AniList record and shows agreement, conflict or unchecked. I pre-registered the evaluation before running it: 18 titles, 124 questions, 744 pairs per model, answered with and without the record in context.",
+      "tags": [
+        "LLM Evaluation",
+        "RAG",
+        "Web App"
+      ],
+      "stack": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Cloudflare Workers",
+        "Cloudflare D1",
+        "Vercel",
+        "Python",
+        "AniList API"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/otaku-oracle",
+        "demo": "https://otaku-oracle.brejesh-bala.workers.dev"
+      },
+      "highlights": [
+        "Grounding raised exact-match accuracy by 38.7 points pooled (95% CI 31.7 to 46.0). On glm-4.7-flash it went from 54.6% to 99.2%. It cleared the pass rule I wrote down first.",
+        "The caveat is in the write-up: the grounded arm contains the answer, so it measures faithful reading of a record, not whether AniList is right.",
+        "AniList returned 403 to Cloudflare Worker IPs, so a small Vercel relay sits in front of it, protected by a shared-secret header.",
+        "Every Jikan and Wikidata call was failing silently because Cloudflare Workers reject redirect mode error. Fixed, with a regression test.",
+        "Multi-source cross-checking is switched off on the live site because Jikan timed out from Cloudflare. Claims verify against AniList alone."
+      ],
+      "date": "2026-11",
+      "order": 4
+    },
+    {
+      "id": "proj-feasible-day",
+      "title": "Feasible Day",
+      "oneLine": "A planner that builds walkable one to three day itineraries from OpenStreetMap and shows which opening-hours and walking-time checks each plan passed.",
+      "description": "LLM day plans look tidy, but the museum may be closed that Monday or the walk may not fit the gap. I measured it: two open LLMs produced a fully feasible day in 2 of 576 runs. So I built a planner on OpenStreetMap that checks every stop against opening hours and every transfer against walking time, and I wrote the pass criteria before writing any of its code.",
+      "tags": [
+        "LLM Evaluation",
+        "Web App"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "MapLibre GL",
+        "OpenStreetMap",
+        "OSRM",
+        "Vitest",
+        "GitHub Actions",
+        "Hugging Face Spaces"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/feasible-day",
+        "demo": "https://brejbala-feasible-day.static.hf.space"
+      },
+      "highlights": [
+        "On 96 pre-registered test days in 12 cities, Llama 3.3 70B and Llama 3.1 8B (3 runs per day each) gave 2 feasible days out of 576. The planner passes 96 of 96 on its own rules.",
+        "Re-timed with an independent routing engine (OSRM), 94.8% of plans still hold up, just under the 95% threshold I set. I left the miss in.",
+        "In 15 cities added later, only 59% of plans pass that routing check. The app shows it instead of tuning it away. My guess is rivers and rail lines, and I haven't tested it.",
+        "Caught my own error: an early figure for unreal places in LLM plans was a map-coverage artefact, so I split the metric and stopped claiming a hallucination rate.",
+        "Free to run: a static app with no server and no runtime keys. The monthly update job has a hard USD 1.50 LLM cap and measured USD 0.0079 for 18 calls."
+      ],
+      "date": "2026-11",
+      "order": 5
+    },
+    {
+      "id": "proj-safetyops-copilot",
+      "title": "SafetyOps Copilot",
+      "oneLine": "Turns a workplace safety observation into an explainable assessment, an action with an owner and a due date, and a shift handover.",
+      "description": "It began as an event-driven ML pipeline: DistilBERT severity scoring, YOLOv8 hard-hat detection and a LangGraph triage brief. Then I asked what would give a safety coordinator a reason to come back tomorrow, because a prediction alone doesn't give anyone ownership. The new workspace tracks corrective actions, needs evidence to close them, and exports a handover as Markdown, CSV or JSON. A local MCP server shares the assessment logic with agents, read-only.",
+      "tags": [
+        "MLOps",
+        "NLP",
+        "MCP",
+        "Web App"
+      ],
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
         "DistilBERT",
         "YOLOv8",
-        "Docker",
-        "Prometheus",
-        "Grafana",
-        "Evidently",
-        "MLflow",
-        "DVC",
-        "Streamlit"
+        "LangGraph",
+        "Redis Streams",
+        "MCP",
+        "Playwright",
+        "Cloud Run"
       ],
       "links": {
         "github": "https://github.com/brej-29/safetyops-copilot",
-        "demo": "https://safetyops-copilot.streamlit.app/"
+        "demo": "https://safetyops-api-a5afr3rcdq-as.a.run.app/"
       },
       "highlights": [
-        "DistilBERT severity classifier trained on 273k real MSHA narratives — 0.78 macro-F1 vs 0.34 rule-based baseline (95% relative lift) and 0.88 high-severity recall (5.5x the baseline)",
-        "YOLOv8n PPE compliance detection (mAP@0.5 ≈ 0.81) behind a wrapper normalizing three different label-scheme conventions into one score",
-        "Redis Streams consumer groups with 3x exponential-backoff retry, dead-letter queue with replay, and idempotent processing keyed on stream message ID — safe under worker crash-restarts",
-        "Graceful ML degradation: both models sit behind lazy imports so the full pipeline, tests, and CI run with zero ML dependencies installed — 36 tests pass without torch",
-        "Evidently drift reports, Prometheus metrics on API and worker, and an 8-panel Grafana dashboard",
-        "~5,100 LOC across 124 files"
+        "DistilBERT fine-tuned on MSHA mine-safety narratives and tested on 1,605 held-out reports: macro-F1 0.78 against 0.34 for a rule baseline, and high-severity recall 0.88 against 0.16.",
+        "Every assessment says which path produced it (trained model or a labelled rule fallback) and shows its priority arithmetic. Model loading never blocks a save.",
+        "Closing an action needs a note, and revision checks stop a stale tab from overwriting newer work.",
+        "The read-only MCP server has three tools and was tested with the official SDK client. It can't read browser records or close an action.",
+        "The live check on Cloud Run caught a missing Secure cookie flag behind the proxy. I fixed it and added a regression test before moving traffic."
       ],
-      "date": "2026-07",
-      "order": 1
+      "date": "2026-11",
+      "order": 6
+    },
+    {
+      "id": "proj-mozhi",
+      "title": "Mozhi",
+      "oneLine": "A Tamil, Malayalam and English voice assistant where a 2 ms trained router replaces LLM prompting, declines what it can't do, and speaks at the respect level you choose.",
+      "description": "The first version asked a small LLM to pick a tool from a prompt, and nobody had measured it. When I did, the answer was valid on 55% of requests, took 3.3 seconds, and it acted on 40.7% of requests it should have declined. So I replaced the LLM with a fine-tuned MiniLM router (23 MB, int8 ONNX). It runs as a Windows app and entirely in the browser. Tamil and Malayalam came later, with a five-level respect meter because you is not one word in either language.",
+      "tags": [
+        "Agentic AI",
+        "NLP",
+        "LLM Evaluation"
+      ],
+      "stack": [
+        "Python",
+        "PyTorch",
+        "ONNX Runtime",
+        "FastAPI",
+        "JavaScript",
+        "Whisper",
+        "PyInstaller",
+        "GitHub Pages"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/mozhi",
+        "demo": "https://brej-29.github.io/mozhi/"
+      },
+      "highlights": [
+        "The router scores 0.941 action macro-F1 (95% CI 0.916 to 0.962) on 2,805 test requests with 0.8% false actions and a 2.2 ms median. The best constrained LLM prompt scored 0.879 at 1,047 ms.",
+        "Pass marks were pre-registered. I ran 3 seeds with bootstrap intervals against 12 compared systems and reported the thresholds I missed.",
+        "Closed a 10-point speech gap by training on 6,600 real Whisper transcripts: 0.929 routing macro-F1 on medium.en.",
+        "The Tamil and Malayalam router is a first model that misses its own target: 0.82 and 0.81 against 0.85. The wording still needs a native speaker's review.",
+        "The optional LLM sits behind a spend guard: monthly budget, daily call cap, reserve before the call, fail closed.",
+        "1,475 public-domain verses and 14 folk-tale summaries in my own words, with the source shown on each."
+      ],
+      "date": "2026-11",
+      "order": 7
+    },
+    {
+      "id": "proj-toonforge",
+      "title": "Toonforge",
+      "oneLine": "A private photo-to-comic-print studio in the browser, with edge-aware smoothing, reusable recipes, an optional text-model planner and a local MCP server.",
+      "description": "The original repo's API tests passed while real inference couldn't produce a valid PNG, because the tests mocked the bytes. I rebuilt it as deterministic image processing in a Web Worker: edge-aware smoothing, tone quantization and Sobel outlines, with a histogram panel and twelve saved recipes. A text model can propose filter settings and you review them before Apply. The photo never leaves the device. This is classical computer vision, not a trained or generative model.",
+      "tags": [
+        "Computer Vision",
+        "MCP",
+        "Web App"
+      ],
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Canvas",
+        "Web Workers",
+        "MCP",
+        "Playwright",
+        "GitHub Actions"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/toonforge-mobile-ai",
+        "demo": "https://brej-29.github.io/toonforge-mobile-ai/"
+      },
+      "highlights": [
+        "The text model sees an instruction, the current settings and three aggregate statistics, never pixels or filenames. Its reply is checked against an allowlist and bounded numbers before you can apply it.",
+        "On seeded targets against posterization and box smoothing, flat-region noise drops from about 30 to 0 and boundary contrast stays at 127 against 63 for box smoothing. Thin low-contrast lines get weaker, and that is documented.",
+        "A local MCP server (list_styles, analyze_png, plan_edit, render_png) shares the production engine, with canonical path checks, size limits and non-overwriting output.",
+        "CI downloads and re-imports a real exported PNG from the live site, which is the check the original project was missing.",
+        "Automated accessibility scans at 390, 768 and 1440 px, plus offline reload and print-race tests."
+      ],
+      "date": "2026-11",
+      "order": 8
+    },
+    {
+      "id": "proj-kindred",
+      "title": "Kindred",
+      "oneLine": "Name one title you loved and get its kin across anime, manga, manhwa, manhua, novels, movies and series, ranked in your browser.",
+      "description": "Recommenders learn from people who rated the same things, and almost nobody rates an anime and its manga in one place. On an AniList sample there are 49,441 recommendation links inside a single format and zero from an anime to a manga. So Kindred reads what titles are about, learns a small taste adapter from the links that do exist, and ranks 12,809 titles per query in the browser from about 5 MB of static files.",
+      "tags": [
+        "Recommenders",
+        "NLP",
+        "Web App"
+      ],
+      "stack": [
+        "Python",
+        "sentence-transformers",
+        "PyTorch",
+        "scikit-learn",
+        "React",
+        "TypeScript",
+        "Vite",
+        "GitHub Pages"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/kindred",
+        "demo": "https://brej-29.github.io/kindred/"
+      },
+      "highlights": [
+        "On a benchmark I pre-registered, Kindred reaches 0.217 NDCG@10 against 0.142 for the best non-learned baseline. The test split was scored once and a rerun reproduces the results byte for byte.",
+        "With no cross-medium labels, the benchmark walks the one bridge that exists: fans of anime A also like anime B, and B was adapted from manga T.",
+        "Three of my pre-registered hypotheses failed and are published. Sentence embeddings alone lost to curated tags (0.121 against 0.142), and on MovieLens plain item-kNN beat content scoring by 3 to 5 times.",
+        "The browser engine is tested against the Python reference on the shipped files, so the numbers on the page describe what actually runs.",
+        "Honest limits: proxy labels rather than human judgments, and live action is not validated across media."
+      ],
+      "date": "2026-11",
+      "order": 9
     },
     {
       "id": "proj-analytics-copilot",
       "title": "Analytics Copilot (Text-to-SQL)",
-      "oneLine": "Mistral-7B fine-tuned with QLoRA to turn natural language into schema-conditioned SQL, with a from-scratch evaluation harness and dual-provider inference failover.",
-      "description": "A full fine-tuning pipeline — dataset curation, QLoRA training, custom dual-benchmark evaluation, Hub publishing — wrapped in a production-shaped serving layer. Mistral-7B-Instruct is fine-tuned with 4-bit NF4 quantization and LoRA adapters (r=16) across all seven attention and MLP projections, then served through a Hugging Face Inference Endpoint with adapter routing and an OpenAI fallback. The Streamlit front end carries zero GPU or ML runtime dependencies: training and serving are fully decoupled.",
+      "oneLine": "Mistral-7B fine-tuned with QLoRA to turn plain questions into schema-aware SQL, with an evaluation harness I wrote from scratch.",
+      "description": "A full fine-tuning pipeline: dataset curation, QLoRA training, a custom two-benchmark evaluation and publishing to the Hub, wrapped in a serving layer shaped like production. Mistral-7B-Instruct is tuned with 4-bit NF4 quantization and LoRA adapters (r=16) on all seven attention and MLP projections. The Streamlit front end carries no GPU or ML dependencies, so training and serving stay separate.",
       "tags": [
-        "GenAI",
-        "LLM Fine-Tuning",
-        "QLoRA",
-        "Text-to-SQL",
+        "Fine-Tuning",
         "NLP",
-        "Model Evaluation"
+        "LLM Evaluation"
       ],
       "stack": [
         "Python",
@@ -655,8 +870,6 @@
         "PEFT",
         "Unsloth",
         "TRL",
-        "bitsandbytes",
-        "Transformers",
         "sqlglot",
         "Hugging Face Endpoints",
         "Streamlit",
@@ -667,407 +880,23 @@
         "demo": "https://analytics-copilot-text2sql.streamlit.app/"
       },
       "highlights": [
-        "Fine-tuned a 7B model with under 1% trainable parameters via 4-bit NF4 quantization and LoRA r=16 adapters across seven projection matrices",
-        "Built a from-scratch evaluation harness — Exact Match, literal-masked structural EM, sqlglot parse-validity, and AST-based schema-adherence checking that catches hallucinated tables and columns string similarity would miss",
-        "Dual-benchmark evaluation quantifying the generalization gap: 35.0% exact match / 100% parse success / 97.5% schema adherence in-domain, vs 76% schema adherence zero-shot on Spider",
-        "Multi-tier inference failover (HF Inference Endpoint with adapter routing → OpenAI) plus a proactive endpoint wake-up ping, deliberately separated so warm-ups never trigger the failure path",
-        "Root-caused a 271-violation CI lint break as upstream linter drift rather than new code, fixing it with a 9-line config pin instead of a repo-wide reformat",
-        "~6,419 LOC, 36 tests across 14 files"
+        "Under 1% of parameters trained, using 4-bit NF4 quantization and LoRA r=16 adapters across seven projection matrices.",
+        "The harness checks exact match, literal-masked match, sqlglot parse validity and AST schema adherence, which catches hallucinated tables and columns that string similarity misses.",
+        "In-domain: 35.0% exact match, 100% parse success and 97.5% schema adherence. Zero-shot on Spider the schema adherence is 76%, which puts a number on the generalization gap.",
+        "Inference fails over from a Hugging Face Endpoint with adapter routing to OpenAI, and a separate wake-up ping warms the endpoint so warm-ups never trigger the failure path.",
+        "A CI break with 271 lint violations turned out to be upstream linter drift. A 9-line config pin fixed it, with no repo-wide reformat."
       ],
       "date": "2026-06",
-      "order": 2
-    },
-    {
-      "id": "proj-rag-workbench",
-      "title": "RAG Agent Workbench",
-      "oneLine": "Agentic RAG backend: 8-node LangGraph pipeline with corrective retrieval, faithfulness verification, and SSE streaming.",
-      "description": "A production retrieval-augmented generation backend built as an 8-node LangGraph pipeline with conditional routing: query normalization → multi-turn contextualization → dense retrieval (Pinecone, llama-text-embed-v2) → bounded corrective retrieval (CRAG) → web-fallback routing (Tavily) → grounded generation (Groq Llama 3.1) → faithfulness verification. A deterministic retrieval-evaluation harness (recall@k, MRR, nDCG@k over a hand-labeled golden set) drove real decisions — including measuring a hosted reranker net-negative (nDCG@3 −0.057, +435 ms) and disabling it on the data.",
-      "tags": [
-        "GenAI",
-        "RAG",
-        "LangGraph",
-        "LLM",
-        "Agentic AI",
-        "NLP"
-      ],
-      "stack": [
-        "Python",
-        "FastAPI",
-        "LangGraph",
-        "Pinecone",
-        "Groq",
-        "Tavily",
-        "Prometheus",
-        "Docker",
-        "Hugging Face Spaces",
-        "Streamlit"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/rag-agent-workbench",
-        "demo": "https://rag-agent-workbench.streamlit.app/"
-      },
-      "highlights": [
-        "8-node agentic LangGraph pipeline with conditional routing and bounded CRAG loop (provably non-runaway iteration cap)",
-        "Deterministic retrieval-eval harness (recall@k, MRR, nDCG@k) on a hand-labeled golden set — used to A/B-test and reject a hosted reranker on data",
-        "Two-threshold retrieval gate with deterministic abstention (the LLM is never asked to answer from empty context) + indirect prompt-injection hardening",
-        "Per-request token/cost accounting, Prometheus latency histograms, true SSE token streaming",
-        "343 tests, CI from a hash-pinned lockfile",
-        "deployed on Docker / Hugging Face Spaces + Streamlit Cloud"
-      ],
-      "date": "2026-05",
-      "order": 3
-    },
-    {
-      "id": "proj-dogbreed-classification",
-      "title": "Dog Breed Classification",
-      "oneLine": "Deep learning pipeline for 120-breed classification with transfer learning.",
-      "description": "End-to-end deep learning solution leveraging MobileNetV2 transfer learning to classify 120 dog breeds with optimized accuracy. Demonstrates proficiency in computer vision, data preprocessing, and model architecture selection—key skills for ML production environments.",
-      "tags": [
-        "TensorFlow",
-        "Transfer Learning",
-        "CNN",
-        "Computer Vision"
-      ],
-      "stack": [
-        "Python",
-        "TensorFlow",
-        "Jupyter"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/Logicmojo-AIML-Assignments-DogBreedClassificationTensorFlow"
-      },
-      "highlights": [
-        "Transfer learning optimization",
-        "120-class multi-label classification",
-        "Production-ready preprocessing pipeline"
-      ],
-      "date": "2025-11",
-      "order": 4
-    },
-    {
-      "id": "proj-heart-disease",
-      "title": "Heart Disease Risk Predictor",
-      "oneLine": "Predictive model for cardiac disease classification from medical data.",
-      "description": "Comprehensive supervised learning pipeline for predicting heart disease risk using patient medical records. Features rigorous data exploration, model selection across multiple algorithms, hyperparameter tuning, and cross-validation—demonstrating systematic ML workflow and healthcare domain understanding.",
-      "tags": [
-        "Machine Learning",
-        "Classification",
-        "Healthcare Analytics",
-        "Feature Engineering"
-      ],
-      "stack": [
-        "Python",
-        "Scikit-learn",
-        "Pandas",
-        "Numpy"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/Logicmojo-AIML-Assignments-heart-disease-prediction-ml"
-      },
-      "highlights": [
-        "Multi-algorithm comparison",
-        "Cross-validated evaluation",
-        "Medical data preprocessing"
-      ],
-      "date": "2025-10",
-      "order": 5
-    },
-    {
-      "id": "proj-bulldozer-price",
-      "title": "Heavy Equipment Price Prediction",
-      "oneLine": "Regression model for predicting equipment resale values.",
-      "description": "Full-stack data science project predicting bulldozer auction prices using real-world commodity data. Covers complete pipeline: feature engineering, handling temporal data, model ensembling with XGBoost, and RMSLE optimization. Demonstrates end-to-end problem-solving from raw data to production predictions.",
-      "tags": [
-        "Regression",
-        "XGBoost",
-        "Ensemble Methods",
-        "Time-Series Features"
-      ],
-      "stack": [
-        "Python",
-        "XGBoost",
-        "Scikit-learn",
-        "Pandas"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/Logicmojo-AIML-Assignments-bulldozer-price-prediction"
-      },
-      "highlights": [
-        "XGBoost ensembling",
-        "Feature engineering for auction data",
-        "RMSLE optimization",
-        "Real-world dataset handling"
-      ],
-      "date": "2025-09",
-      "order": 6
-    },
-    {
-      "id": "proj-otaku-oracle",
-      "title": "Otaku Oracle",
-      "oneLine": "Intelligent anime recommendation engine powered by NLP.",
-      "description": "AI-driven recommendation system applying NLP and collaborative filtering to anime datasets. Demonstrates understanding of recommendation systems, text processing, and user preference modeling—critical for personalization in production ML systems.",
-      "tags": [
-        "NLP",
-        "Recommendation Systems",
-        "Collaborative Filtering"
-      ],
-      "stack": [
-        "Python",
-        "NLTK",
-        "Scikit-learn"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/otaku-oracle"
-      },
-      "highlights": [
-        "Custom recommendation algorithm",
-        "NLP-based feature extraction",
-        "Cold-start problem handling"
-      ],
-      "date": "2025-08",
-      "order": 7
-    },
-    {
-      "id": "proj-meal-planner",
-      "title": "Daily Meal Planner",
-      "oneLine": "Personalized nutrition planning with Streamlit interface.",
-      "description": "Interactive Streamlit application generating daily meal plans based on nutritional goals and dietary constraints. Showcases full-stack ML application development: requirement gathering, algorithm design, and user-centric UI/UX implementation.",
-      "tags": [
-        "Streamlit",
-        "Nutrition Algorithm",
-        "API Integration"
-      ],
-      "stack": [
-        "Python",
-        "Streamlit",
-        "APIs"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/daily-meal-planner-streamlit",
-        "demo": "https://daily-meal-planner.streamlit.app/"
-      },
-      "highlights": [
-        "Intelligent constraint solver",
-        "Real-time API data",
-        "Production Streamlit deployment"
-      ],
-      "date": "2025-07",
-      "order": 8
-    },
-    {
-      "id": "proj-workout-planner",
-      "title": "Daily Workout Planner",
-      "oneLine": "ML-powered fitness program generator.",
-      "description": "Smart workout recommendation engine tailored to user fitness levels, goals, and equipment availability. Demonstrates machine learning application in domain-specific personalization and real-time system adaptability.",
-      "tags": [
-        "Streamlit",
-        "Fitness Algorithm",
-        "Personalization"
-      ],
-      "stack": [
-        "Python",
-        "Streamlit",
-        "Pandas"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/daily-workout-planner",
-        "demo": "https://brejesh-daily-workout-planner.streamlit.app/"
-      },
-      "highlights": [
-        "Progressive workout scaling",
-        "Goal-oriented recommendations",
-        "Equipment constraint handling"
-      ],
-      "date": "2025-06",
-      "order": 9
-    },
-    {
-      "id": "proj-aurora-chat",
-      "title": "Aurora Chat",
-      "oneLine": "Real-time AI chatbot with LLM integration.",
-      "description": "Production-grade conversational AI application leveraging LLMs for natural dialogue. Demonstrates prompt engineering, context management, and real-time inference optimization—essential for modern ML applications in NLP.",
-      "tags": [
-        "LLM",
-        "NLP",
-        "Chatbot",
-        "Prompt Engineering"
-      ],
-      "stack": [
-        "Python",
-        "Streamlit",
-        "LangChain",
-        "OpenAI API"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/aurora-chat-streamlit",
-        "demo": "https://aurora-chat.streamlit.app/"
-      },
-      "highlights": [
-        "LLM prompt optimization",
-        "Token-efficient context handling",
-        "Real-time streaming responses"
-      ],
-      "date": "2025-05",
       "order": 10
     },
     {
-      "id": "proj-hr-analytics",
-      "title": "HR Analytics Dashboard",
-      "oneLine": "Workforce intelligence platform with Power BI.",
-      "description": "Comprehensive business analytics dashboard analyzing HR metrics, employee performance, and organizational trends. Demonstrates data visualization expertise, business intelligence fundamentals, and ability to translate data insights into actionable business metrics.",
-      "tags": [
-        "Power BI",
-        "Business Analytics",
-        "Data Visualization",
-        "KPI Tracking"
-      ],
-      "stack": [
-        "Power BI",
-        "SQL",
-        "Excel"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/hr-analytics-dashboard-powerbi"
-      },
-      "highlights": [
-        "Interactive KPI dashboards",
-        "Employee retention analytics",
-        "Drill-down analytics"
-      ],
-      "date": "2025-04",
-      "order": 11
-    },
-    {
-      "id": "proj-essay-writer",
-      "title": "Essay Writer",
-      "oneLine": "Intelligent essay generation with structured outputs.",
-      "description": "LLM-powered content generation system producing well-structured essays with customizable prompts and export functionality. Demonstrates prompt tuning, output formatting, and practical application of language models for content generation.",
-      "tags": [
-        "LLM",
-        "NLP",
-        "Content Generation",
-        "Prompt Engineering"
-      ],
-      "stack": [
-        "Python",
-        "Streamlit",
-        "LangChain"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/essay-writer-streamlit",
-        "demo": "https://essay-writer-app.streamlit.app/"
-      },
-      "highlights": [
-        "Structured prompt templates",
-        "Multi-format export",
-        "Iterative refinement capability"
-      ],
-      "date": "2025-03",
-      "order": 12
-    },
-    {
-      "id": "proj-disaster-nlp",
-      "title": "Disaster Tweets — NLP Architecture Benchmarks",
-      "oneLine": "7 architectures benchmarked on ~7,600 tweets — USE transfer learning wins at 81.5% accuracy / 0.81 F1.",
-      "description": "A controlled NLP benchmarking study across 7 architectures — TF-IDF + Naive Bayes, Dense, LSTM, GRU, BiLSTM, Conv1D, and Universal Sentence Encoder transfer learning — on ~7,600 disaster tweets with a consistent 90/10 split. USE transfer learning achieved the best results (81.5% accuracy, 0.81 F1), demonstrating that pre-trained encoders outperform from-scratch models on small datasets.",
-      "tags": [
-        "NLP",
-        "Deep Learning",
-        "Transfer Learning",
-        "Model Benchmarking",
-        "TensorFlow"
-      ],
-      "stack": [
-        "Python",
-        "TensorFlow",
-        "TensorFlow Hub",
-        "scikit-learn",
-        "Pandas"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/disaster-tweets-nlp-model-benchmarks"
-      },
-      "highlights": [
-        "7 architectures under identical splits: classical ML, RNN family (LSTM/GRU/BiLSTM), Conv1D, and USE transfer learning",
-        "Best model: Universal Sentence Encoder transfer learning — 81.5% accuracy, 0.81 F1",
-        "Clear evidence that pre-trained encoders beat from-scratch models on small text datasets"
-      ],
-      "date": "2025-02",
-      "order": 13
-    },
-    {
-      "id": "proj-inventory-classifier",
-      "title": "Inventory Bin Classification — CV on SageMaker",
-      "oneLine": "ResNet-50 transfer learning on 10,000+ warehouse images with SageMaker Bayesian HPO, distributed spot training, and a live endpoint.",
-      "description": "An end-to-end computer vision pipeline classifying warehouse bin item counts from 10,000+ images using ResNet-50 transfer learning, with deterministic stratified splits stored as S3 ImageFolder channels. SageMaker Bayesian hyperparameter tuning (learning rate, weight decay, batch size, backbone-freeze) with 2-instance distributed training on managed spot instances delivered a ~22% macro-F1 gain over baseline. Served through a real-time SageMaker endpoint with a custom PyTorch inference handler and AWS Lambda integration.",
-      "tags": [
-        "Computer Vision",
-        "AWS SageMaker",
-        "MLOps",
-        "Deep Learning",
-        "Cloud Deployment"
-      ],
-      "stack": [
-        "Python",
-        "PyTorch",
-        "ResNet-50",
-        "AWS SageMaker",
-        "AWS Lambda",
-        "AWS S3",
-        "Docker"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/inventory-bin-count-classifier-aws-sagemaker"
-      },
-      "highlights": [
-        "~22% macro-F1 gain from SageMaker Bayesian HPO with 2-instance distributed training on managed spot instances",
-        "Deterministic stratified splits as S3 ImageFolder channels for reproducible training",
-        "Real-time SageMaker endpoint with custom PyTorch inference handler + Lambda (image URL / S3 URI → JSON label, confidence, probabilities)",
-        "Full resource cleanup — no orphaned endpoints or storage"
-      ],
-      "date": "2025-01",
-      "order": 14
-    },
-    {
-      "id": "proj-aws-ml-nanodegree",
-      "title": "AWS ML Engineer Nanodegree",
-      "oneLine": "Comprehensive AWS ML engineering curriculum projects.",
-      "description": "Complete Udacity nanodegree covering AWS ML services, MLOps, and production ML pipelines. Includes projects on SageMaker, model deployment, monitoring, and hyperparameter optimization—essential competencies for ML engineering roles.",
-      "tags": [
-        "AWS",
-        "MLOps",
-        "SageMaker",
-        "ML Pipeline"
-      ],
-      "stack": [
-        "Python",
-        "AWS",
-        "Jupyter"
-      ],
-      "links": {
-        "github": "https://github.com/brej-29/udacity-AWS-ml-engineer-nanodegree"
-      },
-      "highlights": [
-        "Hyperparameter optimization",
-        "Model monitoring",
-        "MLOps best practices",
-        "Automated pipelines"
-      ],
-      "date": "2024-12",
-      "order": 15
-    },
-    {
       "id": "proj-customer-churn",
-      "title": "Customer Churn Prediction — MLOps + GenAI",
-      "oneLine": "Leakage-safe churn model with Optuna-tuned XGBoost, SHAP-grounded LLM explanations, and a full MLOps loop — deployed live.",
-      "description": "End-to-end churn prediction on the IBM Telco dataset (7,043 records): six models benchmarked under 5-fold stratified CV on PR-AUC, XGBoost tuned with Optuna (PR-AUC 0.62→0.67) with isotonic calibration and a cost-based decision threshold from an explicit 5:1 FN:FP cost — test PR-AUC 0.66 / ROC-AUC 0.85 / recall 0.87. A SHAP-grounded LLM explanation layer feeds per-prediction drivers into Pydantic-validated explanations with RAG-retrieved retention tactics (sentence-transformers + FAISS); a two-tier faithfulness eval caught a real grounding bug and raised faithfulness 0.72→0.90.",
+      "title": "Customer Churn Prediction",
+      "oneLine": "A leakage-safe churn model with Optuna-tuned XGBoost, SHAP-grounded explanations and a full MLOps loop, deployed live.",
+      "description": "End-to-end churn prediction on the public IBM Telco sample dataset (7,043 records, 26.5% churn). Six models were benchmarked under 5-fold stratified CV on PR-AUC, XGBoost was tuned with Optuna, and the decision threshold of 0.174 comes from an explicit 5:1 false-negative to false-positive cost. An explanation layer feeds SHAP drivers to an LLM, with retention tactics retrieved through sentence-transformers and FAISS.",
       "tags": [
         "MLOps",
-        "Machine Learning",
-        "GenAI",
-        "Explainability",
-        "Model Monitoring",
-        "XGBoost"
+        "Explainability"
       ],
       "stack": [
         "Python",
@@ -1080,7 +909,6 @@
         "Evidently",
         "FastAPI",
         "Docker",
-        "FAISS",
         "GitHub Actions"
       ],
       "links": {
@@ -1088,93 +916,165 @@
         "demo": "https://huggingface.co/spaces/BrejBala/churn-ui"
       },
       "highlights": [
-        "PR-AUC 0.62→0.67 via Optuna HPO",
-        "isotonic calibration + cost-based threshold (5:1 FN:FP)",
-        "test ROC-AUC 0.85, recall 0.87",
-        "SHAP-grounded LLM explanations with RAG retention tactics",
-        "faithfulness eval raised 0.72→0.90 (n=50, seeded)",
-        "Single-source Pandera data contract enforced across train and serve",
-        "Evidently drift monitoring with a 30%-drift retrain rule",
-        "MLflow champion/challenger registry on DagsHub with gated promotion",
-        "CI model-quality gate blocks merges below a PR-AUC floor",
-        "Docker image cut 57% (11.4→4.9 GB)",
-        "deployed live to Hugging Face Spaces (FastAPI + Streamlit), ~399 tests"
+        "Test PR-AUC 0.66, ROC-AUC 0.85 and recall 0.87, with an optimism gap of 0.01.",
+        "A two-tier faithfulness check on the explanations exposed a real grounding bug. Fixing it lifted faithfulness from 0.72 to 0.90 (n=50, seeded).",
+        "One Pandera data contract is shared by training and serving, so the test suite fails if the API schema drifts.",
+        "Evidently drift monitoring with a retrain rule, an MLflow champion and challenger registry, and a CI gate that blocks merges below a PR-AUC floor.",
+        "Cut the Docker image by 57% (11.4 GB to 4.9 GB) with CPU-only torch and a split UI image."
       ],
-      "date": "2024-11",
-      "order": 16
+      "date": "2026-03",
+      "order": 11
     },
     {
-      "id": "proj-stock-terminal",
-      "title": "Stock Mini Terminal",
-      "oneLine": "Real-time stock analysis with fundamentals and technical indicators.",
-      "description": "Production-grade financial analytics platform providing ticker search, price performance tracking, fundamental analysis, and news aggregation. Demonstrates proficiency in financial data processing, API integration, and building decision-support tools—valuable for data science roles in fintech and quantitative analysis.",
+      "id": "proj-outside-weather",
+      "title": "Outside",
+      "oneLine": "An outing planner that checks every hour of a 1 to 8 hour window against your weather preferences and explains the closest alternative when nothing fits.",
+      "description": "A daily high or a single pleasant hour doesn't answer whether you can get outside for two uninterrupted hours. Outside compares up to two cities over three days, requires every hour of a window to fit, and ranks the windows. When nothing matches it shows the closest fit and lists exactly what you would be giving up. The same planning engine is available through an optional local MCP server.",
       "tags": [
-        "Streamlit",
-        "Financial Analytics",
-        "API Integration",
-        "Data Visualization"
+        "MCP",
+        "Web App"
+      ],
+      "stack": [
+        "JavaScript",
+        "Open-Meteo",
+        "Node.js",
+        "MCP",
+        "Playwright",
+        "GitHub Actions"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/outside-weather",
+        "demo": "https://brej-29.github.io/outside-weather/"
+      },
+      "highlights": [
+        "The exact-ranking path agrees with an independent exhaustive reference on 3,000 of 3,000 deterministic cases with zero constraint violations. That is evidence about the software, not about forecast accuracy.",
+        "The check covers interior hours, not just the first one, because a pleasant start can hide a wet second hour.",
+        "Missing values and thunderstorm codes are excluded from both exact matches and alternatives. Nothing gets softened to manufacture a suggestion.",
+        "Timezone handling uses the forecast location's clock and real seconds for contiguity. Calendar export uses UTC."
+      ],
+      "date": "2026-11",
+      "order": 12
+    },
+    {
+      "id": "proj-gambit-realms",
+      "title": "Gambit Realms",
+      "oneLine": "A browser chess game with eight measured opponents, a coach that warns before you lose material, and animated captures in four realms.",
+      "description": "I rebuilt a 220-line pygame chess app to answer one question: can a browser-only engine give a beginner an opponent that makes beginner mistakes, and a coach that warns before a piece is hung? I wrote five targets down first, then ran 3,560 games. Three were met and two were not, and both misses are on the Evidence page of the live site.",
+      "tags": [
+        "Web App",
+        "Evaluation"
+      ],
+      "stack": [
+        "TypeScript",
+        "Vite",
+        "Stockfish (WASM)",
+        "Web Workers",
+        "Playwright",
+        "axe",
+        "GitHub Pages"
+      ],
+      "links": {
+        "github": "https://github.com/brej-29/gambit-realms",
+        "demo": "https://brej-29.github.io/gambit-realms/"
+      },
+      "highlights": [
+        "Eight levels rated 950 to 2600+ on Stockfish's own Elo scale. Each level beats the one below it in 7 of 7 pairs.",
+        "Coach recall is 75.4%, but precision is 64.8% against my 85% target. About 1 alarm in 3 is false.",
+        "The bug that looked like Stockfish crashing at 300k nodes was my adapter sending commands from inside the engine's own callback. Found by bisecting the command sequence.",
+        "Review caught a circular coach label and fabricated-looking intervals in the first evaluation harness. Both were fixed and logged before the reporting run.",
+        "Static site of 2.5 MB, with unit, browser and accessibility checks in CI."
+      ],
+      "date": "2026-11",
+      "order": 13
+    },
+    {
+      "id": "proj-inventory-classifier",
+      "title": "Inventory Bin Classification",
+      "oneLine": "ResNet-50 transfer learning on 10,000+ warehouse images, tuned with SageMaker and served from a live endpoint.",
+      "description": "A computer vision pipeline that classifies how many items are in a warehouse bin. Splits are deterministic and stored as S3 ImageFolder channels. SageMaker Bayesian tuning with 2-instance distributed training on managed spot instances improved macro-F1 by about 22% over the baseline, and the model is served through a real-time endpoint with a custom PyTorch handler and an AWS Lambda in front.",
+      "tags": [
+        "Computer Vision",
+        "MLOps"
       ],
       "stack": [
         "Python",
-        "Streamlit",
-        "yfinance",
-        "APIs"
+        "PyTorch",
+        "ResNet-50",
+        "Amazon SageMaker",
+        "AWS Lambda",
+        "AWS S3",
+        "Docker"
       ],
       "links": {
-        "github": "https://github.com/brej-29/stock-mini-terminal-streamlit",
-        "demo": "https://stock-terminal.streamlit.app/"
+        "github": "https://github.com/brej-29/inventory-bin-count-classifier-aws-sagemaker"
       },
       "highlights": [
-        "Real-time market data",
-        "Multi-source aggregation",
-        "Technical indicators dashboard"
+        "About 22% macro-F1 gain from Bayesian tuning over learning rate, weight decay, batch size and backbone freezing.",
+        "The Lambda takes an image URL or S3 URI and returns a label, confidence and class probabilities as JSON.",
+        "Cleaned up every resource afterwards, so no endpoints or storage were left running."
       ],
       "date": "2025-12",
-      "order": 17
+      "order": 14
     },
     {
-      "id": "proj-data-insights-portal",
-      "title": "Collaborative Data Insights Portal",
-      "oneLine": "Multi-user analytics platform for team-based data exploration.",
-      "description": "Enterprise-level collaborative analytics application enabling teams to share datasets, generate insights, and visualize findings collectively. Showcases understanding of multi-user systems, data governance, and collaborative workflows—critical for data science teams in production environments.",
+      "id": "proj-visual-navigation",
+      "title": "Navigation Aid for Visually Impaired Users",
+      "oneLine": "A wearable that combines an ultrasonic sensor with camera-based object detection and speaks short alerts, built on a Raspberry Pi 4.",
+      "description": "My final-year project at College of Engineering Guindy, built with a team of four under Dr. T. Sridarshini. The device pairs an HC-SR04 proximity sensor with an object detector and turns detections into spoken alerts, with a 2 second debounce so the user isn't flooded with speech. It was my first real experience of an ML result that had to run on small hardware.",
       "tags": [
-        "Streamlit",
-        "Collaboration",
-        "Data Analytics",
-        "Dashboard"
+        "Computer Vision",
+        "Research"
       ],
       "stack": [
         "Python",
-        "Streamlit",
-        "Pandas",
-        "Plotly"
+        "OpenCV",
+        "PyTorch",
+        "SSD",
+        "CBAM",
+        "DIoU",
+        "Raspberry Pi 4",
+        "gTTS"
       ],
-      "links": {
-        "github": "https://github.com/brej-29/collaborative-data-insights-portal"
-      },
+      "links": {},
       "highlights": [
-        "Multi-user architecture",
-        "Shared dataset management",
-        "Interactive visualization",
-        "Role-based workflows"
+        "Added a Convolutional Block Attention Module and replaced IoU with DIoU for box regression. That gave a 3.3% accuracy increase over baseline SSD on COCO: 0.96 accuracy, 0.963 precision and 450 ms inference, with the biggest gain on small objects.",
+        "Benchmarked six alternatives from a four-paper literature survey, plus ultrasonic-only sensing.",
+        "Ultrasonic alone covers 2 cm to 2 m at 40 degrees. The camera pipeline covers 30 cm to 6 m at 78 to 108 degrees, so the two sensors fill each other's gaps."
       ],
-      "date": "2025-11",
-      "order": 18
+      "date": "2024-05",
+      "order": 15
     }
   ],
   "experience": [
     {
+      "company": "Cloud202 Limited",
+      "role": "AI Engineer",
+      "dates": "Sep 2026 to Present",
+      "location": "United Kingdom (Remote)",
+      "bullets": [
+        "Audited governance and safety in Qubitz, the company's platform for building AI agents on AWS, against the 4 projects in AWS's sample AI agent factory, covering 15+ governance features.",
+        "Wrote a phased plan, since approved, for building governance controls into the platform and into the agents it creates on Amazon Bedrock and Bedrock AgentCore.",
+        "Researched Amazon SageMaker for features that could extend the company's enterprise offering across client projects, alongside 7 AWS trainings and accreditations in sales, technical, cloud economics and agentic AI."
+      ],
+      "techStack": [
+        "Amazon Bedrock",
+        "Bedrock AgentCore",
+        "Amazon SageMaker",
+        "AWS",
+        "Agent governance"
+      ],
+      "order": 1
+    },
+    {
       "company": "Accenture",
       "role": "Advanced Application Engineering Analyst",
-      "dates": "Jul 2024 – Mar 2026",
+      "dates": "Jul 2024 to Mar 2026",
       "location": "Bengaluru, India",
       "bullets": [
-        "Optimized AWS-hosted REST APIs (Java / Spring Boot), cutting high-latency responses (>5s) from ~80% to <20% via profiling, SQL query tuning, and caching on a financial-services platform",
-        "Delivered 200+ story points across Agile/Scrum sprints, translating ambiguous requirements into production features with regular stakeholder demos",
-        "Maintained >90% automated test coverage (unit, contract, BDD) tracked via SonarQube",
-        "strengthened CI/CD reliability through code reviews and linting/test gates",
-        "Built and modified REST endpoints with business-rule logic",
-        "debugged DevOps pipeline issues and optimized release workflows on AWS (Jenkins CI/CD)"
+        "Cut slow API responses (over 5 seconds) from roughly 80% of calls to under 20% on a Java and Spring Boot financial services platform on AWS, through profiling, SQL query tuning and caching.",
+        "Delivered 200+ story points across Agile sprints, turning loosely written requirements into shipped features alongside UI and QA teammates, and presented sprint demos to client stakeholders.",
+        "Kept automated test coverage above 90% across unit, contract and BDD suites, built proper regression suites, and closed critical defects through root-cause analysis.",
+        "Onboarded 3 new joiners: local setup, background on the client and team, a walkthrough of their first sprint and code reviews."
       ],
       "techStack": [
         "Java",
@@ -1182,97 +1082,123 @@
         "AWS",
         "REST APIs",
         "SQL",
+        "BDD",
         "Jenkins",
         "SonarQube",
-        "Git",
-        "Agile/Scrum"
-      ],
-      "order": 1
-    },
-    {
-      "company": "UnisLink",
-      "role": "Data Engineering Intern",
-      "dates": "Jul 2023 – Aug 2023",
-      "location": "Chennai, India",
-      "bullets": [
-        "Researched and benchmarked natural-language-to-SQL (NL-to-SQL) approaches, documenting accuracy–complexity tradeoffs to guide early product direction",
-        "Built and validated SQL Server replication/synchronization checks and a replication test plan to improve data consistency across large tables"
-      ],
-      "techStack": [
-        "SQL Server",
-        "NL-to-SQL Research",
-        "Data Replication",
-        "Documentation"
+        "Agile"
       ],
       "order": 2
     },
     {
-      "company": "Yaltech Global Consulting",
-      "role": "Machine Learning Intern",
-      "dates": "Jul 2022 – Sep 2022",
-      "location": "Tiruchirappalli, India",
+      "company": "UnisLink",
+      "role": "Data Engineering Intern",
+      "dates": "Jul 2023 to Aug 2023",
+      "location": "Chennai, India",
       "bullets": [
-        "Trained and cross-validated classification/regression models (Logistic Regression, Random Forest) in Python/scikit-learn on structured datasets",
-        "Performed EDA, data cleaning, and feature engineering (Pandas/NumPy)",
-        "communicated findings to non-technical stakeholders with clear visualizations"
+        "Researched natural language to SQL approaches and reviewed commercial products, documenting accuracy against complexity and cost to shape the early product direction.",
+        "Validated SQL Server replication and synchronization checks across large tables, then documented the findings and handoffs for the team."
       ],
       "techStack": [
-        "Python",
-        "Pandas",
-        "NumPy",
-        "scikit-learn",
-        "EDA",
-        "Cross-Validation"
+        "SQL Server",
+        "NL-to-SQL research",
+        "Data replication",
+        "Documentation"
       ],
       "order": 3
     },
     {
-      "company": "Youth India Foundation",
-      "role": "Sponsorship Intern",
-      "dates": "Jan 2022 – Mar 2022",
-      "location": "Chennai, India",
+      "company": "Yaltech Global Consulting",
+      "role": "Machine Learning Intern",
+      "dates": "Jul 2022 to Sep 2022",
+      "location": "Tiruchirappalli, India",
       "bullets": [
-        "Built and maintained a structured database of potential sponsors",
-        "supported outreach and follow-ups",
-        "Assisted in planning and executing a coding event, strengthening stakeholder communication and delivery under deadlines"
+        "Trained and cross-validated regression and classification models in Python and scikit-learn on structured business data, to build a car recommendation system.",
+        "Did the exploratory analysis, cleaning and feature preparation in Pandas, and presented findings to non-technical stakeholders with Seaborn and Matplotlib visuals."
       ],
       "techStack": [
-        "Stakeholder Management",
-        "Outreach",
-        "Event Coordination"
+        "Python",
+        "Pandas",
+        "scikit-learn",
+        "Seaborn",
+        "Matplotlib"
       ],
       "order": 4
     },
     {
-      "company": "TREC-STEP",
-      "role": "Incubation & Proposals Intern",
-      "dates": "Apr 2021 – Jun 2021",
-      "location": "Tiruchirappalli, India",
+      "company": "Youth India Foundation",
+      "role": "Sponsorship Intern",
+      "dates": "Jan 2022 to Mar 2022",
+      "location": "Chennai, India",
       "bullets": [
-        "Supported senior leadership on international funding proposals, including an EU Horizon 2020 submission on Responsible AI (RAI)",
-        "Coordinated incubation activities — site visits, documentation, and ecosystem-building program execution"
+        "Built and maintained a structured database of potential sponsors, and supported outreach and follow-ups.",
+        "Helped plan and run a coding event, which meant working with stakeholders and delivering under deadlines."
       ],
       "techStack": [
-        "Proposal Research",
-        "Responsible AI",
-        "Documentation",
-        "Program Support"
+        "Stakeholder management",
+        "Outreach",
+        "Event coordination"
       ],
       "order": 5
+    },
+    {
+      "company": "TREC-STEP Technology Business Incubator",
+      "role": "Incubation & Proposals Intern",
+      "dates": "Apr 2021 to Jun 2021",
+      "location": "Tiruchirappalli, India",
+      "bullets": [
+        "Did desk research and drafted sections of an EU Horizon 2020 proposal on Integrated Local Energy Systems and a CIFAR Responsible AI proposal under the Canada Solution Network (STAR RAISE).",
+        "Coordinated incubation activities, including startup interactions and site visits for programs on innovation, climate and gender inclusion."
+      ],
+      "techStack": [
+        "Proposal research",
+        "Responsible AI",
+        "Program coordination"
+      ],
+      "order": 6
     }
   ],
   "certificates": [
     {
-      "title": "Advanced Data Science & AI Program",
-      "issuer": "Logicmojo Academy",
-      "date": "2026-01",
+      "title": "AWS Partner: Agentic AI Essentials",
+      "issuer": "AWS",
+      "date": "2026-10",
       "skillsTags": [
-        "Data Science",
-        "Machine Learning",
-        "Deep Learning",
-        "AI"
+        "AWS",
+        "AI Agents",
+        "Agentic AI"
       ],
       "order": 1
+    },
+    {
+      "title": "AWS Partner: Generative AI Technical",
+      "issuer": "AWS",
+      "date": "2026-09",
+      "skillsTags": [
+        "AWS",
+        "Generative AI"
+      ],
+      "order": 2
+    },
+    {
+      "title": "AWS Partner Accreditations: Technical, Sales and Cloud Economics",
+      "issuer": "AWS",
+      "date": "2026-09",
+      "skillsTags": [
+        "AWS",
+        "Cloud Architecture",
+        "Cloud Economics"
+      ],
+      "order": 3
+    },
+    {
+      "title": "McKinsey Forward Program",
+      "issuer": "McKinsey & Company",
+      "date": "2026-06",
+      "skillsTags": [
+        "Problem Solving",
+        "Communication"
+      ],
+      "order": 4
     },
     {
       "title": "AWS Machine Learning Engineer Nanodegree",
@@ -1282,46 +1208,54 @@
       "skillsTags": [
         "AWS",
         "SageMaker",
-        "MLOps",
-        "Deep Learning"
+        "MLOps"
       ],
-      "order": 2
+      "order": 5
     },
     {
-      "title": "OCI 2025 Certified Data Science Professional",
+      "title": "IBM Data Science Courses (Python, Databases and SQL, Tools, Methodology)",
+      "issuer": "IBM (Coursera)",
+      "date": "2025-12",
+      "skillsTags": [
+        "Python",
+        "SQL",
+        "Data Science"
+      ],
+      "order": 6
+    },
+    {
+      "title": "Advanced Data Science & AI Certification",
+      "issuer": "Logicmojo Academy",
+      "date": "2025-11",
+      "skillsTags": [
+        "Generative AI",
+        "Machine Learning",
+        "AI Agents",
+        "Docker"
+      ],
+      "order": 7
+    },
+    {
+      "title": "Version Control with Git",
+      "issuer": "Atlassian (Coursera)",
+      "date": "2025-11",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/T3JASRVCRKKJ",
+      "skillsTags": [
+        "Git",
+        "Version Control"
+      ],
+      "order": 8
+    },
+    {
+      "title": "Oracle Cloud Infrastructure Data Science Professional",
       "issuer": "Oracle",
       "date": "2025-10",
       "skillsTags": [
         "Oracle Cloud",
         "Data Science",
-        "Cloud ML",
         "Model Deployment"
       ],
-      "order": 3
-    },
-    {
-      "title": "IBM Data Science (Tools · Python · Databases & SQL)",
-      "issuer": "IBM – Coursera",
-      "date": "2025-09",
-      "skillsTags": [
-        "Python",
-        "SQL",
-        "Databases",
-        "Data Science Tools"
-      ],
-      "order": 4
-    },
-    {
-      "title": "Version Control with Git",
-      "issuer": "Atlassian – Coursera",
-      "date": "2025-11",
-      "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/T3JASRVCRKKJ",
-      "skillsTags": [
-        "Git",
-        "Version Control",
-        "Collaboration"
-      ],
-      "order": 5
+      "order": 9
     },
     {
       "title": "CCNA v7: Introduction to Networks",
@@ -1329,16 +1263,15 @@
       "date": "2023-06",
       "skillsTags": [
         "Networking",
-        "TCP/IP",
-        "OSI Model"
+        "TCP/IP"
       ],
-      "order": 6
+      "order": 10
     }
   ],
   "contact": {
     "email": "brejesh.bala@gmail.com",
     "location": "Bengaluru, India",
-    "availability": "Open to Machine Learning / GenAI roles — available immediately",
+    "availability": "Happy to talk about agent safety, evaluation or whatever you're building. Email is the fastest way in.",
     "socials": [
       {
         "name": "Email",
@@ -1374,70 +1307,76 @@
   },
   "experienceStats": [
     {
-      "label": "Story Points Delivered",
-      "value": "200+",
-      "description": "Agile delivery on a financial-services platform at Accenture",
+      "label": "Scenarios in Agent GovBench",
+      "value": "999",
+      "description": "Synthetic agent-misuse cases across 9 tools and 5 stub MCP servers. 45% are proper requests that only look risky, so blocking everything doesn't win.",
       "order": 1
     },
     {
-      "label": "High-Latency Responses Cut",
-      "value": "80% → <20%",
-      "description": "AWS REST APIs fixed via profiling, SQL tuning, and caching",
+      "label": "Out-of-scope questions declined",
+      "value": "13 of 14",
+      "description": "Compliance Workbench refused questions about rules it doesn't cover, with no model call, and wrongly declined 0 of 50 covered ones.",
       "order": 2
     },
     {
-      "label": "Automated Test Coverage",
-      "value": "90%+",
-      "description": "Unit, contract, and BDD tests tracked via SonarQube",
+      "label": "LLM day plans that were feasible",
+      "value": "2 of 576",
+      "description": "Two open models on 96 test days. The Feasible Day planner passes 96 of 96 on its own rules and 94.8% on an independent routing check.",
       "order": 3
     },
     {
-      "label": "Tests Across Shipped ML Systems",
-      "value": "810+",
-      "description": "Across four shipped ML systems — RAG backend, churn MLOps, Text-to-SQL, and SafetyOps",
+      "label": "Accuracy gained from grounding",
+      "value": "+38.7 pts",
+      "description": "Otaku Oracle, 744 question pairs per model, 95% CI 31.7 to 46.0. It measures faithful reading of a record, not whether the record is right.",
       "order": 4
     },
     {
-      "label": "Docker Image Reduction",
-      "value": "57%",
-      "description": "11.4 GB → 4.9 GB via CPU-only torch and a split slim UI image",
+      "label": "Router macro-F1 at 2.2 ms",
+      "value": "0.941",
+      "description": "Mozhi's 23 MB router, against 0.879 at 1,047 ms for the best constrained LLM prompt.",
       "order": 5
     },
     {
-      "label": "Macro-F1 Gain (SageMaker HPO)",
-      "value": "22%",
-      "description": "Bayesian tuning with 2-instance distributed spot training",
+      "label": "Kindred NDCG@10",
+      "value": "0.217 vs 0.142",
+      "description": "Against the best non-learned baseline, on a benchmark pre-registered before scoring.",
       "order": 6
     },
     {
-      "label": "Churn Model Lift (Optuna)",
-      "value": "PR-AUC 0.62 → 0.67",
-      "description": "With isotonic calibration and a cost-based decision threshold",
+      "label": "Attacks blocked at 8% false positives",
+      "value": "62%",
+      "description": "The free local guard in Toolcall Guard on 1,566 real agent calls. Gemini blocks 98% at 3%, and the cascade cuts hosted cost about 29%.",
       "order": 7
     },
     {
-      "label": "LLM Faithfulness Improvement",
-      "value": "0.72 → 0.90",
-      "description": "Two-tier grounding eval caught and fixed a real bug (n=50, seeded)",
+      "label": "Gambit Realms targets met",
+      "value": "3 of 5",
+      "description": "Pre-registered targets over 3,560 games. Both misses are published on the live Evidence page.",
       "order": 8
     },
     {
-      "label": "Retrieval Eval Discipline",
-      "value": "recall@k · MRR · nDCG",
-      "description": "Deterministic harness over a hand-labeled golden set — decisions on data, not vibes",
+      "label": "Slow API responses cut",
+      "value": "80% → <20%",
+      "description": "Responses over 5 seconds on an AWS-hosted financial platform at Accenture, after profiling, SQL tuning and caching.",
       "order": 9
     },
     {
-      "label": "Severity Model Lift",
-      "value": "0.34 → 0.78",
-      "description": "Macro-F1 over the rule-based baseline on 273k MSHA narratives; 5.5x high-severity recall",
+      "label": "Story points delivered",
+      "value": "200+",
+      "description": "Agile sprints at Accenture, with demos to client stakeholders.",
       "order": 10
     },
     {
-      "label": "Text-to-SQL Schema Adherence",
-      "value": "97.5%",
-      "description": "In-domain, with 100% parse validity — AST-checked against the supplied schema",
+      "label": "Automated test coverage",
+      "value": "90%+",
+      "description": "Unit, contract and BDD suites on the Accenture platform.",
       "order": 11
+    },
+    {
+      "label": "Severity classifier macro-F1",
+      "value": "0.34 → 0.78",
+      "description": "SafetyOps Copilot's DistilBERT against a rule baseline on held-out MSHA narratives. High-severity recall 0.88 against 0.16.",
+      "order": 12
     }
   ],
   "navItems": [
@@ -1473,36 +1412,28 @@
     }
   ],
   "seo": {
-    "siteTitle": "Brejesh Balakrishnan — Machine Learning & GenAI Engineer",
-    "siteDescription": "Machine Learning / GenAI Engineer in Bengaluru with a production engineering background at Accenture. Ships LLM & RAG applications (LangGraph, Pinecone, retrieval + faithfulness evaluation), calibrated predictive models with SHAP explainability, and full MLOps — MLflow registries, drift monitoring, CI quality gates, Docker — deployed live on AWS SageMaker and Hugging Face Spaces.",
+    "siteTitle": "Brejesh Balakrishnan | AI Engineer, Agentic AI and Evaluation",
+    "siteDescription": "AI Engineer working on agent governance and safety on Amazon Bedrock. I build agents, RAG and guardrails and measure them with pre-registered evaluations. Open code, honest limits.",
     "keywords": [
-      "Machine Learning Engineer",
-      "GenAI Engineer",
-      "LLM Engineer",
+      "AI Engineer",
+      "Agentic AI",
+      "AI Agents",
+      "LLM Evaluation",
+      "Agent Guardrails",
+      "AI Governance",
+      "MCP",
+      "Model Context Protocol",
       "RAG",
       "LangGraph",
-      "LangChain",
-      "Pinecone",
-      "FAISS",
-      "MLOps",
-      "MLflow",
-      "DVC",
-      "Evidently",
-      "SHAP",
-      "Optuna",
-      "XGBoost",
+      "Amazon Bedrock",
+      "Bedrock AgentCore",
+      "Google ADK",
+      "LoRA",
       "PyTorch",
-      "Python",
-      "SQL",
-      "AWS SageMaker",
-      "AWS Lambda",
       "FastAPI",
-      "Docker",
-      "CI/CD",
-      "Hugging Face",
-      "NLP",
-      "Computer Vision",
-      "Data Scientist",
+      "Python",
+      "TypeScript",
+      "MLOps",
       "Bengaluru"
     ],
     "ogImage": "/og.png"

@@ -1,63 +1,80 @@
-name: Deploy to GitHub Pages
+name: Portfolio preview and Pages promotion
 
 on:
   push:
-    branches:
-      - main
+    branches: [codex/fable-portfolio]
   workflow_dispatch:
+    inputs:
+      preview_run:
+        description: Successful preview workflow run ID to promote
+        required: true
+        type: string
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+  actions: read
 
 jobs:
-  build:
+  preview:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Compute site URL
-        run: |
-          REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          OWNER="${GITHUB_REPOSITORY%%/*}"
-          if [[ "$REPO_NAME" == *.github.io ]]; then
-            echo "NEXT_PUBLIC_SITE_URL=https://${REPO_NAME}" >> "$GITHUB_ENV"
-          else
-            echo "NEXT_PUBLIC_SITE_URL=https://${OWNER}.github.io/${REPO_NAME}" >> "$GITHUB_ENV"
-          fi
-
-      - name: Build static site
-        run: npm run build
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - run: npm ci
+      - run: npm run verify
+      - uses: actions/upload-artifact@v4
         with:
-          path: ./out
+          name: portfolio-static-export
+          path: out/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+
+  prepare:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check that the approved export was built from this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREVIEW_RUN: ${{ inputs.preview_run }}
+        run: |
+          [[ "$PREVIEW_RUN" =~ ^[0-9]+$ ]]
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$PREVIEW_RUN" \
+            --jq '[.path, .event, .head_branch, .conclusion, .head_sha] | @tsv' > preview.tsv
+          IFS=$'\t' read -r workflow event branch conclusion sha < preview.tsv
+          test "$workflow" = '.github/workflows/deploy-pages.yml'
+          test "$event" = 'push'
+          test "$branch" = 'codex/fable-portfolio'
+          test "$conclusion" = 'success'
+          test "$sha" = "$GITHUB_SHA"
+      - uses: actions/download-artifact@v4
+        with:
+          name: portfolio-static-export
+          path: out
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.preview_run }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
 
   deploy:
-    needs: build
+    needs: prepare
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy reviewed export
         id: deployment
         uses: actions/deploy-pages@v4
